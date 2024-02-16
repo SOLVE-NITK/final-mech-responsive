@@ -36,9 +36,9 @@ const showTooltip = function (e) {
 // canvas.style.height = rect.height + "px";
 
 //get the canvas, canvas context, and dpi
-let canvas = document.getElementById("myCanvas"),
-  ctx = canvas.getContext("2d"),
-  dpi = window.devicePixelRatio;
+// let canvas = document.getElementById("myCanvas"),
+//   ctx = canvas.getContext("2d"),
+//   dpi = window.devicePixelRatio;
 function fix_dpi() {
   //create a style object that returns width and height
   let style = {
@@ -67,15 +67,4 @@ function draw() {
 requestAnimationFrame(draw);
 
 document.addEventListener("resize", draw);
-/*
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function () {
-  var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navbar").style.top = "0";
-  } else {
-    document.getElementById("navbar").style.top = "-50px";
-  }
-  prevScrollpos = currentScrollPos;
-};
-*/
+

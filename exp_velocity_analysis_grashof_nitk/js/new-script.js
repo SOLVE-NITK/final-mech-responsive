@@ -48,11 +48,7 @@ var quickrefCS = false;
 //temporary or dummy variables
 var temp=0;
 
-/*
-// for trials during development
-function trythis()
-{ 		alert();}
-*/
+
 
 //change simulation specific css content. e.g. padding on top of variable to adjust appearance in variables window
 function editcss()
@@ -65,11 +61,6 @@ $('#datatable1').css('position','absolute');
 //$('#datatable2').css('left','395px');
 //$('#datatable2').css('top','340px');
 $('#vba').css('position','absolute');
-
-
-//$('#legend').css("width",document.getElementById('legendimg').width+"px");
-//$('#quickref').css("height",document.getElementById('quickrefimg').height+"px");
-
 }
 
 //start of simulation here; starts the timer with increments of 0.1 seconds
@@ -120,50 +111,6 @@ function rotstate()
     rotstatus=1;
   } 
 }
-
-/*
-//Displaying Equations for Quick Reference
-function showEquations()
-{
-	if(quickrefCS)
-	{
-		$('#quickreficon').css('border', 'double');
-		$('#quickref').css('width', '0px');
-		$('#quickref').css('left', '600px');
-		$('#quickref').css('border', '0px');
-		quickrefCS=false;	
-		
-	}
-	else
-	{
-		$('#quickreficon').css('border', 'inset red');
-		$('#quickref').css('width', document.getElementById('quickrefimg').width+"px");
-		$('#quickref').css("left", 599-document.getElementById('quickrefimg').width+"px");
-		$('#quickref').css('border', 'solid 1px');
-		quickrefCS=true;	
-	}
-}
-
-//Displaying Legend
-function showLegend()
-{
-	if(legendCS)
-	{
-		$('#legendicon').css('border', 'double');
-		$('#legend').css('height', '0px');
-		$('#legend').css('border', '0px');
-		legendCS=false;	
-	}
-	else
-	{
-		$('#legendicon').css('border', 'inset red');
-		$('#legend').css("height", document.getElementById('legendimg').height+"px");
-		$('#legend').css('border', 'solid 1px');
-		legendCS=true;	
-	}
-}
-*/
-
 
 //Initialise system parameters here
 function varinit()
@@ -293,12 +240,7 @@ $('#r1slider').slider("disable");
 $('#r2slider').slider("disable");
 $('#r3slider').slider("disable");
 $('#r4slider').slider("disable");
-/*
-$('#omega2slider').slider("enable"); 
-$('#omega2spinner').spinner("enable");
- 
-$('#theta2slider').slider("disable"); 
-$('#theta2spinner').spinner("disable"); */
+
 omega2=rotstatus*$('#omega2spinner').spinner("value");
 theta2=theta2+(0.1*deg(omega2));
 theta2=theta2%360;
@@ -350,10 +292,7 @@ vo.ycoord=0;
 	if(r1==r3 && r2==r4)
 	{
 		theta4=theta2;
-		/*if(theta2<180)
-		theta4dash=deg(2*Math.atan((-kb+Math.sqrt(det))/(2*ka)));
-		else
-		theta4dash=deg(2*Math.atan((-kb-Math.sqrt(det))/(2*ka)));*/
+	
 	}
 	else
 	{
@@ -376,12 +315,7 @@ vo.ycoord=0;
 		theta3+=360;
 	if(theta4<0)
 		theta4+=360;
-	/*if(theta3dash<0)
-		theta3dash+=360;
-	if(theta4dash<0)
-		theta4dash+=360;
-	if(theta3dash==360)
-		theta3dash=0;*/
+
 	
 // Velocity Calculations
 
@@ -429,19 +363,13 @@ function draw()
   c=pointtrans(c,trans);
   d=pointtrans(d,trans);
   
- /* a2=pointtrans(a2,cross);
-  b2=pointtrans(b2,cross);
-  c2=pointtrans(c2,cross);
-  d2=pointtrans(d2,cross);*/
+
 document.getElementById('titleincanvas').innerHTML="Grashof Linkage";
   pointjoin(a,b,ctx,"#0066FF");
   pointjoin(b,c,ctx,"#D00000");
   pointjoin(c,d,ctx,"#005500");
   pointjoin(d,a,ctx,"#993300");
- /* pointjoin(a2,b2,ctx,"#0066FF");
-  pointjoin(b2,c2,ctx,"#D00000");
-  pointjoin(c2,d2,ctx,"#005500");
-  pointjoin(d2,a2,ctx,"#993300");*/
+
   pointdisp(a,ctx);
   pointdisp(b,ctx);
   pointdisp(c,ctx);
@@ -450,7 +378,7 @@ document.getElementById('titleincanvas').innerHTML="Grashof Linkage";
 	ctx.save();
    ctx.lineWidth=1;
   //  ctx.font="bold 16px 'Comic Sans MS'";
-  ctx.font = '1.4rem "Nunito", sans-serif';
+  ctx.font = '15px "Nunito", sans-serif';
   ctx.imageSmoothingEnabled = false;
   ctx.fillStyle = "black";
    ctx.fillText("Position Diagram", 85,175);
@@ -460,30 +388,19 @@ document.getElementById('titleincanvas').innerHTML="Grashof Linkage";
    ctx.save();
    ctx.lineWidth=1;
   //  ctx.font="bold 16px 'Comic Sans MS'";
-  ctx.font = '1.4rem "Nunito", sans-serif';
+  ctx.font = '15px "Nunito", sans-serif';
   ctx.imageSmoothingEnabled = false;
   ctx.fillStyle = "black";
    ctx.fillText("Position Diagram", 85,175);
    ctx.fillText("Velocity Diagram", 85,360);
    ctx.restore();
    
-  //  ctx.save();
-  //  ctx.lineWidth=0;
-  // //  ctx.font="bold 16px 'Comic Sans MS'";
-  // ctx.font = '1.4rem "Nunito", sans-serif';
-  // ctx.imageSmoothingEnabled = false;
-  // ctx.fillStyle = "black";
-  //  ctx.fillText("Position Diagram", 100,175);
-  //  ctx.fillText("Velocity Diagram", 100,360);
-  //  ctx.restore();
+
 
 drawvel(ctx);
    
    
-/*  pointdisp(a2,ctx);
-  pointdisp(b2,ctx);
-  pointdisp(c2,ctx);
-  pointdisp(d2,ctx);*/
+
   }
   else
   {
@@ -495,9 +412,21 @@ $('#datatable1').hide();
   ctx.font = '16px "Nunito", sans-serif';
   ctx.save();
   ctx.lineWidth=2;
-  ctx.strokeText("Combination does not satisfy Grashof rule ",100,200);
+  ctx.strokeText("Combination does not satisfy Grashof rule ",-0,200,270);
   ctx.restore();
-  printcomment("<center>Please go to non-Grashof simulation<br>if you wish to work with the given link combination</center>",0)
+  ctx.strokeText("Please go to non-Grashof simulation", 0, 300);
+  ctx.font = '16px "Nunito", sans-serif';
+  ctx.strokeText("if you wish to work with the given", 0, 314);
+  ctx.font = '16px "Nunito", sans-serif';
+  ctx.lineWidth=1.5;
+  ctx.strokeText("link combination", 0, 330);
+  // printcomment("<center>Please go to non-Grashof simulation<br>if you wish to work with the given link combination</center>",0)
+// printcomment("Please go to non-Grashof simulation<br>if you wish to work with the given link combination", 1000, '50px "Nunito", sans-serif', "left")
+  document.getElementById("vba").style.display = "none";
+  document.getElementById("vcb").style.display = "none";
+  document.getElementById("vca").style.display = "none";
+  document.getElementById("commentboxleft").style.display = "none";
+  document.getElementById("commentboxright").style.display = "none";
   }
  /* if(document.getElementById("trace").checked==true)
   {
@@ -519,15 +448,17 @@ function drawvel(ctx)
   vba=pointtrans(vba,transV);
   vca=pointtrans(vca,transV);
   vcb=pointtrans(vcb,transV);
+
+  
  
-  pointjoin(vo,vba,ctx,"#0066FF",2);
-  drawArrow(vba.xcoord,vba.ycoord,ctx,180-theta2-rotstatus*90,15,30,"#0066FF");
+  pointjoin(vo,vba,ctx,"#0066FF",3.5);
+  drawArrow(vba.xcoord,vba.ycoord,ctx,180-theta2-rotstatus*90,15,30,"#0066FF",2);
 
-  pointjoin(vba,vcb,ctx,"#D00000",2);
-  drawArrow(vcb.xcoord,vcb.ycoord,ctx,180-theta3-(signof(omega3))*90,15,30,"#D00000");
+  pointjoin(vba,vcb,ctx,"#D00000",3.5);
+  drawArrow(vcb.xcoord,vcb.ycoord,ctx,180-theta3-(signof(omega3))*90,15,30,"#D00000",2);
 
-  pointjoin(vo,vca,ctx,"#005500",2);
-  drawArrow(vca.xcoord,vca.ycoord,ctx,180-theta4-(signof(omega4))*90,15,30,"#005500");
+  pointjoin(vo,vca,ctx,"#005500",3.5);
+  drawArrow(vca.xcoord,vca.ycoord,ctx,180-theta4-(signof(omega4))*90,15,30,"#005500",2);
 
 //positioning labels
 document.getElementById("vba").style.position = 'absolute';
@@ -599,15 +530,7 @@ printcomment("Scale of Velocity diagram = 1:"+scaleV+"<br> Data table contains a
 
 if(scaleV<1)
 printcomment("Scale of Velocity diagram = "+1/scaleV+":1<br> Data table contains actual values",2);
-/*document.getElementById("datatable2").innerHTML="<p>Crossed Configuration</p>\
-<table>\
-<tr><th>Angle</th><th>Value</th></tr>\
-<tr><td>&theta;<sub>2</sub></td><td>"+roundd(theta2,2)+"&deg;</td></tr>\
-<tr><td>&theta;<sub>3</sub></td><td>"+roundd(theta3dash,2)+"&deg;</td></tr>\
-<tr><td>&theta;<sub>4</sub></td><td>"+roundd(theta4dash,2)+"&deg;</td></tr>\
-<tr><td>&gamma;</td><td>"+roundd(gamma,2)+"&deg;</td></tr>\
-</table>"; // confirm why only gamma was being displayed in the flash simulation.
-*/
+
 }
 // prints comments passed as 'commenttext' in location specified by 'commentloc' in the comments box;
 // 0 : Single comment box, 1 : Left comment box, 2 : Right comment box
@@ -634,6 +557,7 @@ function printcomment(commenttext,commentloc)
   else
   {
   document.getElementById('commentboxright').style.visibility='hidden';
+
   document.getElementById('commentboxleft').style.width='570px';
   document.getElementById('commentboxleft').innerHTML = "<center>please report this issue to adityaraman@gmail.com</center>"; 
   // ignore use of deprecated tag <center> . Code is executed only if printcomment function receives inappropriate commentloc value

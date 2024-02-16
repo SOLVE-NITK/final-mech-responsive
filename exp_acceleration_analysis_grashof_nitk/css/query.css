@@ -37,7 +37,7 @@ em:current font size
     display: block;
     width: 100%;
     height: 100%;
-    /* background-color: red; */
+   
   }
   .div__control img {
     width: 3rem;
@@ -85,7 +85,6 @@ em:current font size
     display: block;
     width: 100%;
     height: 100%;
-    /* background-color: red; */
   }
   .div__control img {
     width: 3rem;
@@ -131,15 +130,7 @@ em:current font size
     justify-content: space-evenly;
     border-radius: 0;
     scroll-behavior: auto;
-    /* background: linear-gradient(
-      to bottom,
-      #f7c3a9da,
-      #c17a53da,
-      #c17a53da,
-      #c17a53da,
-      #c17a53da,
-      #311b10da
-    ); */
+    
   }
   .tool-menu {
     list-style: none;
@@ -206,10 +197,12 @@ em:current font size
   }
 }
 
+
+
 /* **************************** */
 /* Below 820px (Smaller Tablets) */
 /* **************************** */
-@media (max-width: 48em )  {
+@media  (max-width: 48em )  {
   .main-section {
     grid-template-columns: 1fr;
   }
@@ -262,17 +255,31 @@ em:current font size
     width: 24px;
     border: double;
   }
-
+  #legendicon:active ~ #legend,
+#legendicon:hover + #legend {
+  height: 80px; 
+  border: solid 1px; 
+}
+  div#newComment {
+    margin-top: 74px;
+     
+   }
   #variables{
     width: 100%;
   }
-  /* .tool-list span {
-    font-size: 1.6rem;
-  } */
   
   
 }
-
+/* **************************** */
+/* Below 768px */
+/* **************************** */
+@media (max-width:768px){
+  #canvas-container {
+    width: 100%;
+    height: 70rem;
+  }
+  
+}
 /* **************************** */
 /* Below 704px (Smaller Tablets) */
 /* **************************** */
@@ -293,7 +300,7 @@ em:current font size
   }
   .logo-div {
     width: 8.5rem;
-    /* padding: 0.8rem 0 0.8rem 3.3rem; */
+
   }
   .main__task-div:nth-child(4) {
     margin-bottom: 6rem;
@@ -321,25 +328,32 @@ em:current font size
     width: 80px;
     font-size: 12px;
     text-align: center;
+    left: 180px;
   }
   #legendicon {
     background-image: url("../images/legendicon.png");
     position: absolute;
-    left: 480px;
-    top: 480px;
+    left: 470px;
+    top: 590px;
     height: 24px;
     width: 24px;
     border: double;
+    z-index: 101;
   }
   #legend {
     position: absolute;
-    left: 323px;
-    top: 380px;
+    left: 249px;
+    top: 515px;
     height: 0px;
     width: 220px;
     border: solid 0px;
     z-index: 100;
     overflow: hidden;
+  }
+  #legendicon:active ~ #legend,
+  #legendicon:hover + #legend {
+    height: 80px; 
+    border: solid 1px; 
   }
   #quickref {
     position: absolute;
@@ -366,11 +380,16 @@ em:current font size
     font-size: 15px;
     
   }
+  div#newComment {
+   margin-top: 74px;
+    
+  }
   #variables{
     width: 100%;
   }
   canvas#simscreen{
-    left: 140px;
+    left: 67px;
+    width: 501px;
   }
  
 }
@@ -386,14 +405,10 @@ em:current font size
 
   .title-div h1 {
     padding: 0.2rem;  
-
     font-size: 1.6rem;
-    /* text-align: center; */
   }
   .div__control {
     gap: 2rem;
-    /* top: 1.8rem;
-    right: 1.5rem; */
   }
   .ctrl-icons {
     width: 2.5rem;
@@ -412,9 +427,6 @@ em:current font size
     display: inline-block;
     font-size: 1.5rem;
   }
-  /* p{
-    margin-bottom: 64px;
-  } */
   .main {
     gap: 0.5rem;
   }
@@ -430,7 +442,6 @@ em:current font size
     height: 100%;
     border: none;
     border-top: 1px solid rgba(177, 176, 176, 0.855);
-    /* background-color: red; */
   }
   .div__control img {
     width: 2.7rem;
@@ -453,6 +464,7 @@ canvas#simscreen {
     width: 80px;
     font-size: 10px;
     text-align: center;
+    left:0px;
   }
   .datatable table {
     border: 1px solid #000011;
@@ -465,8 +477,8 @@ canvas#simscreen {
   #legendicon {
     background-image: url("../images/legendicon.png");
     position: absolute;
-    left: 260px;
-    top: 440px;
+    left: 278px;
+    top: 437px;
     height: 24px;
     width: 24px;
     border: double;
@@ -481,7 +493,13 @@ canvas#simscreen {
     z-index:100;
     overflow: hidden;
   }
-
+  #legendicon:active ~ #legend,
+  #legendicon:hover + #legend {
+    height: 80px; 
+    border: solid 1px;
+    width: 215px;
+  }
+  
   div#commentboxleft {
     left: 10px;
     top: 580px;
@@ -508,6 +526,11 @@ canvas#simscreen {
     
   
   }
+  div#newComment {
+    margin-top: 30px;
+    font-size: 14px;
+     
+   }
   #variables{
     width: 100%;
   }

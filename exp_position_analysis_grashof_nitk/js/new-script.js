@@ -116,48 +116,7 @@ function rotstate()
   } 
 }
 
-/*
-//Displaying Equations for Quick Reference
-function showEquations()
-{
-	if(quickrefCS)
-	{
-		$('#quickreficon').css('border', 'double');
-		$('#quickref').css('width', '0px');
-		$('#quickref').css('left', '600px');
-		$('#quickref').css('border', '0px');
-		quickrefCS=false;	
-		
-	}
-	else
-	{
-		$('#quickreficon').css('border', 'inset red');
-		$('#quickref').css('width', document.getElementById('quickrefimg').width+"px");
-		$('#quickref').css("left", 599-document.getElementById('quickrefimg').width+"px");
-		$('#quickref').css('border', 'solid 1px');
-		quickrefCS=true;	
-	}
-}
 
-//Displaying Legend
-function showLegend()
-{
-	if(legendCS)
-	{
-		$('#legendicon').css('border', 'double');
-		$('#legend').css('height', '0px');
-		$('#legend').css('border', '0px');
-		legendCS=false;	
-	}
-	else
-	{
-		$('#legendicon').css('border', 'inset red');
-		$('#legend').css("height", document.getElementById('legendimg').height+"px");
-		$('#legend').css('border', 'solid 1px');
-		legendCS=true;	
-	}
-}
-*/
 
 
 //Initialise system parameters here
@@ -288,12 +247,7 @@ $('#r1slider').slider("disable");
 $('#r2slider').slider("disable");
 $('#r3slider').slider("disable");
 $('#r4slider').slider("disable");
-/*
-$('#omega2slider').slider("enable"); 
-$('#omega2spinner').spinner("enable");
- 
-$('#theta2slider').slider("disable"); 
-$('#theta2spinner').spinner("disable"); */
+
 omega2=$('#omega2spinner').spinner("value");
 //printcomment(omega2,2);
 theta2=theta2+(rotstatus*0.1*deg(omega2));
@@ -313,11 +267,7 @@ $('#r3slider').slider("enable");
 $('#r4slider').slider("enable");
 
 $('#omega2set').hide();
-$('#theta2set').show();/*
-$('#theta2slider').slider("enable"); 
-$('#theta2spinner').spinner("enable");
-$('#omega2slider').slider("disable"); 
-$('#omega2spinner').spinner("disable"); */
+$('#theta2set').show();
 theta2=$('#theta2spinner').spinner("value");
 }
 checkGrashof();
@@ -375,7 +325,7 @@ a2.ycoord=0;
 	if(theta3dash==360)
 		theta3dash=0;
 		dispTables();
-printcomment("AD=r1   AB=r2   BC=r3   CD=r4<br> r1 is grounded. r2 is given input",1);
+
 }
 draw();
 
@@ -432,16 +382,7 @@ $('#datatable2').hide();
   ctx.restore();
   printcomment("<center>Please go to non-Grashof simulation<br>if you wish to work with the given link combination</center>",0)
   }
- /* if(document.getElementById("trace").checked==true)
-  {
-  pointtrace(ptx,pty,ctx,"blue",2);
-  pointdisp(p,ctx,2,'','','',true,1);
-  }
-  else
-  {
-  ptx=[];
-  pty=[];
-  }*/
+ 
 }
 //function to check whether links satisfy grashof condition
 function checkGrashof()

@@ -10,17 +10,14 @@ var commentloc=0;
 //computing section
 var trans= new point(100,120);
 var transV= new point(400,120);
-var transA= new point(250,220);
+var transA= new point(310,220);
 
 //var cross= new point(375,150);
 var a= new point(0,0,"A");
 var b= new point(0,0,"B");
 var c= new point(0,0,"C");
 var d= new point(0,0,"D");
-//var a2= new point(0,0,"A");
-//var b2= new point(0,0,"B");
-//var c2= new point(0,0,"C");
-//var d2= new point(0,0,"D");
+
 var vo= new point(0,0,"");
 var vba= new point(0,0,"");
 var vcb= new point(0,0,"");
@@ -144,30 +141,7 @@ function rotstate()
   } 
 }
 
-/*
-//Displaying Equations for Quick Reference
-function showEquations()
-{
-	if(quickrefCS)
-	{
-		$('#quickreficon').css('border', 'double');
-		$('#quickref').css('width', '0px');
-		$('#quickref').css('left', '600px');
-		$('#quickref').css('border', '0px');
-		quickrefCS=false;	
-		
-	}
-	else
-	{
-		$('#quickreficon').css('border', 'inset red');
-		$('#quickref').css('width', document.getElementById('quickrefimg').width+"px");
-		$('#quickref').css("left", 599-document.getElementById('quickrefimg').width+"px");
-		$('#quickref').css('border', 'solid 1px');
-		quickrefCS=true;	
-	}
-}
-*/
-//Modified for 4Bar Acc
+
 //Displaying Legend
 function showLegend()
 {
@@ -181,9 +155,7 @@ function showLegend()
 	else
 	{
 		$('#legendicon').css('border', 'inset red');
-		$('#legend').css("height", document.getElementById('legendimg').height+"px");
-		// $('#legend').css("left", 592-document.getElementById('legendimg').width+"px");		
-		// $('#legend').css("top", 469-document.getElementById('legendimg').height+"px");		
+		$('#legend').css("height", document.getElementById('legendimg').height+"px");	
 		$('#legend').css('border', 'solid 1px');
 		legendCS=true;	
 	}
@@ -319,12 +291,7 @@ $('#r1slider').slider("disable");
 $('#r2slider').slider("disable");
 $('#r3slider').slider("disable");
 $('#r4slider').slider("disable");
-/*
-$('#omega2slider').slider("enable"); 
-$('#omega2spinner').spinner("enable");
- 
-$('#theta2slider').slider("disable"); 
-$('#theta2spinner').spinner("disable"); */
+
 omega2=rotstatus*$('#omega2spinner').spinner("value");
 theta2=theta2+(0.1*deg(omega2));
 theta2=theta2%360;
@@ -343,11 +310,7 @@ $('#r3slider').slider("enable");
 $('#r4slider').slider("enable");
 
 $('#omega2set').hide();
-$('#theta2set').show();/*
-$('#theta2slider').slider("enable"); 
-$('#theta2spinner').spinner("enable");
-$('#omega2slider').slider("disable"); 
-$('#omega2spinner').spinner("disable"); */
+$('#theta2set').show();
 theta2=$('#theta2spinner').spinner("value");
 omega2=rotstatus*$('#omega2spinner').spinner("value");
 }
@@ -367,57 +330,41 @@ vo.xcoord=0;
 vo.ycoord=0;
 ao.xcoord=0;
 ao.ycoord=0;
-//a2.xcoord=0;
-//a2.ycoord=0;
+
 
    b.xcoord=a.xcoord+(r2*Math.cos(rad(theta2)));
 	b.ycoord=a.ycoord+(r2*Math.sin(rad(theta2)));
 	d.xcoord=a.xcoord+(r1);
 	d.ycoord=a.ycoord;
-	//b2.xcoord=a2.xcoord+(r2*Math.cos(rad(theta2)));
-	//b2.ycoord=a2.ycoord+(r2*Math.sin(rad(theta2)));
-	//d2.xcoord=a2.xcoord+(r1);
-	//d2.ycoord=a2.ycoord;
+	
 	if(r1==r3 && r2==r4)
 	{
 		theta4=theta2;
 
-		/*if(theta2<180)
-		theta4dash=deg(2*Math.atan((-kb+Math.sqrt(det))/(2*ka)));
-		else
-		theta4dash=deg(2*Math.atan((-kb-Math.sqrt(det))/(2*ka)));*/
+
 	}
 	//else
 	{
 	theta4=deg(2*Math.atan((-kb-Math.sqrt(det))/(2*ka)));
-	//theta4dash=deg(2*Math.atan((-kb+Math.sqrt(det))/(2*ka)));
+	
 	
 	}
-	//theta3=deg(Math.asin((r4*Math.sin(rad(theta4))-r2*Math.sin(rad(theta2)))/r3));
 
-	
-	//theta3dash=deg(Math.asin((r4*Math.sin(rad(theta4dash))-r2*Math.sin(rad(theta2)))/r3));
 	
 	c.xcoord=d.xcoord+r4*Math.cos(rad(theta4));
 	c.ycoord=d.ycoord+r4*Math.sin(rad(theta4));
 	theta3=deg(Math.atan((c.ycoord-b.ycoord)/(c.xcoord-b.xcoord)));
 
-	//c2.xcoord=d2.xcoord+r4*Math.cos(rad(theta4dash));
-	//c2.ycoord=d2.ycoord+r4*Math.sin(rad(theta4dash));
+	
 	gamma=theta4-theta3;
-	//gammadash=theta4dash-theta3dash;
+	
 	if(theta2<0)
 		theta2+=360;
 	if(theta3<0)
 		theta3+=180;
 	if(theta4<0)
 		theta4+=360;
-	/*if(theta3dash<0)
-		theta3dash+=360;
-	if(theta4dash<0)
-		theta4dash+=360;
-	if(theta3dash==360)
-		theta3dash=0;*/
+
 	
 // Velocity Calculations
 
@@ -496,8 +443,8 @@ ac.ycoord=atc.ycoord;
 
   
 
-printcomment("AD=r1   AB=r2   BC=r3   CD=r4<br> r1 is grounded. r2 is given input<br> Data table contains actual values",1);
-printcomment("V and A in table are linear Velocity and Acceleration, respectively, of one end of link wrt another",2);
+// printcomment("AD=r1   AB=r2   BC=r3   CD=r4<br> r1 is grounded. r2 is given input<br> Data table contains actual values",1);
+// printcomment("V and A in table are linear Velocity and Acceleration, respectively, of one end of link wrt another",2);
 }
 draw();
 
@@ -528,19 +475,13 @@ function draw()
   c=pointtrans(c,trans);
   d=pointtrans(d,trans);
   
- /* a2=pointtrans(a2,cross);
-  b2=pointtrans(b2,cross);
-  c2=pointtrans(c2,cross);
-  d2=pointtrans(d2,cross);*/
-  document.getElementById('titleincanvas').innerHTML="Grash of Linkage";
+ 
+  document.getElementById('titleincanvas').innerHTML="Grashof Linkage";
   pointjoin(a,b,ctx,"#0066FF");
   pointjoin(b,c,ctx,"#D00000");
   pointjoin(c,d,ctx,"#005500");
   pointjoin(d,a,ctx,"#993300");
- /* pointjoin(a2,b2,ctx,"#0066FF");
-  pointjoin(b2,c2,ctx,"#D00000");
-  pointjoin(c2,d2,ctx,"#005500");
-  pointjoin(d2,a2,ctx,"#993300");*/
+
   pointdisp(a,ctx);
   pointdisp(b,ctx);
   pointdisp(c,ctx);
@@ -573,10 +514,7 @@ function draw()
 drawvel(ctx);
    
    
-/*  pointdisp(a2,ctx);
-  pointdisp(b2,ctx);
-  pointdisp(c2,ctx);
-  pointdisp(d2,ctx);*/
+
   }
   else
   {
@@ -591,24 +529,22 @@ $('#datatable1').hide();
   $('#acb').hide();
   $('#ac').hide();
 $('#legendicon').hide();
+$('#newComment').hide();
   ctx.strokeStyle="#000000";
-  ctx.font = "16px Georgia";
+  ctx.font = "16px 'Nunito',san-serif";
   ctx.save();
-  ctx.lineWidth=2;
+  ctx.lineWidth=1;
   ctx.strokeText("Combination does not satisfy Grashof rule ",100,200);
+   
   ctx.restore();
-  printcomment("<center>Please go to non-Grashof simulation<br>if you wish to work with the given link combination</center>",0)
+  
+  ctx.strokeText("Please go to non-Grashof simulation", 100, 300);
+  ctx.strokeText("if you wish to work with the given", 105, 314);
+  ctx.strokeText("link combination", 180, 330);
+
+  // printcomment("Please go to non-Grashof simulation<br>if you wish to work with the given <br> link combination",0)
   }
- /* if(document.getElementById("trace").checked==true)
-  {
-  pointtrace(ptx,pty,ctx,"blue",2);
-  pointdisp(p,ctx,2,'','','',true,1);
-  }
-  else
-  {
-  ptx=[];
-  pty=[];
-  }*/
+
   
  
 }
@@ -745,9 +681,7 @@ Ab.xcoord=(ao.xcoord + ab.xcoord) / 2, // Calculate the midpoint along the x-axi
   Ac.ycoord= (ao.ycoord + ac.ycoord) / 2  // Calculate the midpoint along the y-axis
   pointdisp(Ac, ctx, 2, "blue", "white", "black", "12px", "12px");
 
- /* context.moveTo(380,382);
-  context.lineTo(430,382);
-  context.stroke();*/
+ 
 
   // dashed line for Tangential Accelerations
   context.save();
@@ -782,23 +716,7 @@ document.getElementById("ac").style.left = ""+(-10+Math.round(60+transA.xcoord+a
 document.getElementById("ac").style.top = ""+(-10+Math.round(200+transA.ycoord+ac.ycoord)/2)+"px";
 document.getElementById("acb").style.left = ""+(-10+Math.round(60+ab.xcoord+acb.xcoord)/2)+"px";
 document.getElementById("acb").style.top = ""+(-10+Math.round(200+ab.ycoord+acb.ycoord)/2)+"px";
-/*
-if(scaleV>=1)
-printcomment("Scale of Velocity diagram = 1:"+scaleV,2);
 
-if(scaleV<1)
-printcomment("Scale of Velocity diagram = "+1/scaleV,2);
-*/
-
-/*document.getElementById("datatable2").innerHTML="<p>Crossed Configuration</p>\
-<table>\
-<tr><th>Angle</th><th>Value</th></tr>\
-<tr><td>&theta;<sub>2</sub></td><td>"+roundd(theta2,2)+"&deg;</td></tr>\
-<tr><td>&theta;<sub>3</sub></td><td>"+roundd(theta3dash,2)+"&deg;</td></tr>\
-<tr><td>&theta;<sub>4</sub></td><td>"+roundd(theta4dash,2)+"&deg;</td></tr>\
-<tr><td>&gamma;</td><td>"+roundd(gamma,2)+"&deg;</td></tr>\
-</table>"; // confirm why only gamma was being displayed in the flash simulation.
-*/
 }
 // prints comments passed as 'commenttext' in location specified by 'commentloc' in the comments box;
 // 0 : Single comment box, 1 : Left comment box, 2 : Right comment box

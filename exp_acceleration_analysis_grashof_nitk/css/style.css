@@ -23,7 +23,6 @@
   position: relative;
 }
 .logo-div {
-  /* align-self: flex-start; */
   display: inline-block;
   margin-left: 2rem;
 }
@@ -33,7 +32,6 @@ h1 {
   display: inline-block;
   align-self: center;
   margin: auto;
-  /* vertical-align: middle; */
 }
 /* bolts */
 .round {
@@ -142,7 +140,6 @@ h1 {
   width: 4rem;
   height: 4rem;
   color: var(--clr-title-background);
-  /* box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.5); */
 }
 
 /* ****************** */
@@ -180,10 +177,10 @@ h1 {
 
 .main-section {
   display: grid;
-  /* grid-template-columns: repeat(2, 1fr); */
   grid-template-columns: 50fr 50fr;
   gap: 0.5rem;
   overflow-y: auto;
+  overflow: hidden;
   scroll-behavior: smooth;
   padding: 0 0.5rem 0 0;
 }
@@ -192,7 +189,6 @@ h1 {
   width: 100%;
   background-color: #ffffffc9;
   border-radius: 0.9rem;
-  /* padding: 1.5rem; */
   max-height: 100%;
   font-size: 1.6rem;
   border: 0.5rem solid var(--clr-text-clr);
@@ -206,24 +202,12 @@ h1 {
 
 .main__task-div:nth-child(4) {
   grid-column: 1/-1;
-  /* grid-row: 1/4; */
+ 
 }
 
-  /* .title-control-div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    background-image: linear-gradient(
-      to bottom,
-      var(--clr-side-background3),
-      var(--clr-side-background2)
-    );
-  } */
+
 .footer {
   font-size: 1.2rem;
-  /* padding: 0 1rem; */
   grid-column: 1/-1;
   text-align: center;
   background-image: linear-gradient(
@@ -236,9 +220,6 @@ h1 {
 }
 
 .div__control {
-  /* position: absolute;
-  top: 1.6rem;
-  right: 2.2rem; */
   margin-top: 0.35rem;
   margin-right: 1rem;
 }
@@ -283,16 +264,17 @@ canvas#simscreen2 {
 }
 
 canvas#simscreen {
-  position: absolute;
-  
+  position: absolute; 
   top: 66px;
   height: 414px;
-  width: 375px;
+  width: 557px;
+  left: 4em;
   
 }
 .ab{
   margin-left: 150px;
 }
+
 #canvas-container {
   display: flex;
   width: 100%;
@@ -316,14 +298,13 @@ canvas#simscreen {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* background-color: green; */
+ 
 }
 
 .circuit-dia {
   display: inline-block;
   position: relative;
   text-align: center;
-  /* width: 10rem; */
   height: auto;
 }
 
@@ -357,7 +338,6 @@ canvas#simscreen {
   background-color: rgba(247, 247, 247, 0.5);
   padding: 0.5rem;
   font-size: 1.1rem;
-  /* right: -10rem; */
   display: none;
 }
 .circuit-dia:hover span,
@@ -381,21 +361,16 @@ canvas#simscreen {
   gap: 2rem;
   width: 200%;
 }
+
 .settings-sections {
   display: flex;
   flex-direction: column;
-  /* border: 0.1rem solid #777; */
-  /* padding: 0 1rem; */
   gap: 1rem;
 }
 
 .variables-sections,
 .control-sections {
   padding: 1rem 1rem 2rem 1rem;
-  /* border: 1px solid var(--clr-title-background);
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem; */
-
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
@@ -434,6 +409,9 @@ label {
   width: 150px;
   margin-left: 3.5rem; 
 }
+.mm1{
+  margin-right: 22px;
+}
 /********************************************/
 #comments {
   color: #1b1b1b;
@@ -450,6 +428,7 @@ label {
   width: 80px;
   font-size: 12px;
   text-align: center;
+  top: 20em;
 }
 .datatable table {
   border: 1px solid #000011;
@@ -457,6 +436,7 @@ label {
   width: 120px;
   margin-top: 110px;
   margin-left: 410px;
+  
   
   
 }
@@ -478,7 +458,7 @@ label {
   background-image: url("../images/legendicon.png");
   position: absolute;
   left: 710px;
-  top: 451px;
+  top: 578px;
   height: 24px;
   width: 24px;
   border: double;
@@ -486,17 +466,24 @@ label {
 #legend {
   position: absolute;
   left:490px;
-  top: 380px;
+  top: 500px;
   height: 0px;
   width: 220px;
   border: solid 0px;
   z-index:100;
   overflow: hidden;
+ 
+}
+#legendicon:active ~ #legend,
+#legendicon:hover + #legend {
+  height: 80px;
+  border: solid 1px; 
 }
 #titleincanvas {
   position:absolute;
   left: 300px;
   top: 38px;
+  font-family: "Nunito",sans-serif;
   
 
 }
@@ -519,6 +506,19 @@ div#commentboxright {
   text-align: right;
   font-size: 16px;
   
+}
+div#newComment{
+  position: relative;
+  left: 10px;
+  top: 20px;
+  font-family: "Nunito", sans-serif;
+  font-size: 15px;
+  width:auto;
+  padding: 1px 22px;
+  margin-top: 130px;
+  margin-left: 10px;
+  z-index: 1;
+ 
 }
 
 

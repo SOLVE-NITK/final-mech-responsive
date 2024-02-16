@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Acceleration Four Bar Mechanism</title>
+    <title>SOLVE - Mechanics of Machine Lab -Four Bar Mechanism </title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -33,7 +33,6 @@
       src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"
     ></script>
 
-    <!--<script defer src="js/script.js"></script>-->
     <script defer src="js/newscript.js"></script>
     <script type="text/javascript" src="js/MOMscript.js"></script>
   </head>
@@ -87,25 +86,6 @@
               >
               <span>Variables</span>
           </li>
-          <!-- <li class="tool-list">
-            <a href="#comments" class="tool-link" title="Comments"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="icons"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg></a
-              >
-              <span>Results</span>
-          </li> -->
           <li class="tool-list">
             <img id="playpausebutton" onclick="simstate()" src="images/bluepausedull.svg" alt="" class="icons"/>
             <span class="playPause">Pause</span>
@@ -121,12 +101,7 @@
           <div id="simulation" class="main__task-div">
             <div class="title-control-div">
               <h3 class="task-title">Simulation</h3>
-              <!-- <div id="controls" class="div__control">
-
-                <img id="playpausebutton" onclick="simstate()" src="images/bluepausedull.png" alt="" />
-                <img id="rotationbutton" onclick="rotstate()" src="images/bluecwdull.png" />
-
-              </div> -->
+            
             </div>
             
 
@@ -144,21 +119,23 @@
               
               <div id="datatable1" class="datatable"></div>
               <div id="datatable2" class="datatable"></div>
-              
+              <div id="newComment" >
+                <ul id="given">
+                  <h2 style="text-align: left;text-decoration: underline;font-family:Nunito,sans-serif;">Given data:</h2>
+                  <li>AD=r1   AB=r2   BC=r3   CD=r4</li>
+                  <li>r1 is grounded.</li>
+                  <li>r2 is given inputput</li>
+                  <li>Data table contains actual values</li>
+                  <li>V and A in table are linear Velocity and Acceleration,<br>respectively, of one end of link wrt another</li>
+                </ul>
+               
+              </div>
               <div id="commentboxleft"></div>
               <div id="commentboxright"></div>
-              <div id="legendicon" title="Legend" onclick="showLegend();"></div>
+              <div id="legendicon" title="Legend" ></div>
               <div id="legend"><img id="legendimg" src="images/legend4BARacc.png"></img></div>
              
-              </div>
-
-              <!--<div class="graph-div display-hide">
-                <canvas id="graphscreen1" class="canvas"></canvas>
-              </div>
-              <div class="graph-div display-hide">
-                <canvas id="graphscreen2" class="canvas"></canvas>-->
-              
-            
+              </div>            
           </div>
         
           </div>
@@ -174,7 +151,7 @@
                   <div class="input-container">
                     <label for="r1spinner"><p title="Link Length">r1  </p></label>
                   <input class="var-spinner" id="r1spinner" name="value" />
-                  <span class="mm">(mm)</span>
+                  <span class="mm">mm</span>
                   
                   </div>
                   <div class="var-slider" id="r1slider"></div>
@@ -184,7 +161,7 @@
                   <label for="r2spinner"><p title="Link Length">r2</p></label>
                   <input class="var-spinner" id="r2spinner" name="value" />
                  
-                  <span class="mm">(mm)</span> 
+                  <span class="mm">mm</span> 
                   </div>
                   <div class="var-slider" id="r2slider"></div>
                 </div>
@@ -193,7 +170,7 @@
                   <label for="r3spinner"><p title="Link Length">r3 </p></label>
                   <input class="var-spinner" id="r3spinner" name="value" />
 
-                  <span class="mm">(mm)</span> 
+                  <span class="mm">mm</span> 
                 </div>
                   <div class="var-slider" id="r3slider"></div>
                 </div>
@@ -201,7 +178,7 @@
                     <div class="input-container">
                     <label for="r4spinner"><p title="Link Length">r4</p></label>
                     <input class="var-spinner" id="r4spinner" name="value" />
-                    <span class="mm">(mm)</span> 
+                    <span class="mm">mm</span> 
                     </div>
                     <div class="var-slider" id="r4slider"></div>
                     </div>
@@ -209,7 +186,7 @@
                       <div class="input-container">
                       <label for="theta2spinner"><p title="Link Length">&theta;<sub>2</sub></p></label>
                       <input class="var-spinner" id="theta2spinner" name="value" />
-                      <span class="mm">(&deg;) </span> 
+                      <span class="mm1">&deg;</span> 
                       </div>
                       <div class="var-slider" id="theta2slider"></div>
                       </div>
@@ -217,7 +194,7 @@
                         <div class="input-container">
                         <label for="omega2spinner"><p title="Link Length">&omega;<sub>2</sub></p></label>
                         <input class="var-spinner" id="omega2spinner" name="value" />
-                        <span class="mm">(rad/s)</span>
+                        <span class="mm">rad/s</span>
                       </div>
                         <div class="var-slider" id="omega2slider"></div>
                      

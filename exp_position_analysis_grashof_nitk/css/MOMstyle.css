@@ -1,20 +1,6 @@
 
 
-/* canvas#simscreen2 {
-  position: absolute;
-  left: 30px;
-  top: 250px;
-  height: 400px;
-  width: 550px;
-}
 
-canvas#simscreen {
-  position: absolute;
-  left: 17px;
-  top: 86px;
-  height: 414px;
-  width: 575px;
-} */
 canvas#simscreen {
   width: 100%;
   height: 81%;

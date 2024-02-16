@@ -29,11 +29,6 @@ const showTooltip = function (e) {
   sectionTooltip.style.left = x + 20 + "px";
 };
 
-// canvas.width = rect.width * devicePixelRatio;
-// canvas.height = rect.height * devicePixelRatio;
-// ctx.scale(devicePixelRatio / 2, devicePixelRatio / 2);
-// canvas.style.width = rect.width + "px";
-// canvas.style.height = rect.height + "px";
 
 //get the canvas, canvas context, and dpi
  canvas = document.getElementById("myCanvas"),
@@ -67,15 +62,4 @@ function draw() {
 requestAnimationFrame(draw);
 
 document.addEventListener("resize", draw);
-/*
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function () {
-  var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navbar").style.top = "0";
-  } else {
-    document.getElementById("navbar").style.top = "-50px";
-  }
-  prevScrollpos = currentScrollPos;
-};
-*/
+

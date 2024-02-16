@@ -35,7 +35,8 @@ em:current font size
   }
 
   #canvas-container {
-    margin-left: 160px;
+    margin-left: 178px;
+    height: 466px;
 }
   
   
@@ -51,8 +52,8 @@ em:current font size
     width: 120px;
   }
   #datatable1{
-    left : 232px;
-    top : 269px;
+    left : 206px;
+    top : 233px;
   }
   #datatable1 p{
   font-size: 14px;
@@ -60,8 +61,8 @@ em:current font size
   }
   
   #datatable2{
-    left : 426px;
-    top : 269px;
+    left : 398px;
+    top : 233px;
   }
    #datatable2 p{
   font-size: 13px;
@@ -69,25 +70,17 @@ em:current font size
   }
   #titleincanvas {
     position: absolute;
-    left: 249px;
+    left: 292px;
     top: 60px;
   }
-
+  div#newComment{
+    top: 8px;
+  }
 
   #variables{
     width: 201%;
   }
-  /* .variables-sections,
-  .control-sections {
-    padding: 1rem 1rem 2rem 1rem;
-   
   
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-    width: 20rem;
-    margin-left: 25rem;
-  } */
   
 
 }
@@ -122,11 +115,14 @@ em:current font size
   .tool-list span {
     font-size: 1.2rem;
   }
+  div#newComment{
+    top: 25px;
+  }
   .canvas {
     display: block;
     width: 100%;
     height: 100%;
-    /* background-color: red; */
+   
   }
   .div__control img {
     width: 3rem;
@@ -156,7 +152,8 @@ em:current font size
   }
 
   #canvas-container {
-    margin-left: 170px;
+    margin-left: 265px;
+    height: 476px;
 }
   
   .datatable {
@@ -191,17 +188,7 @@ em:current font size
   #variables{
     width: 201%;
   }
-  /* .variables-sections,
-  .control-sections {
-    padding: 1rem 1rem 2rem 1rem;
-    
-  
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-    width: 13rem;
-    margin-left: 32rem;
-  } */
+ 
   
 }
 
@@ -237,15 +224,7 @@ em:current font size
     justify-content: space-evenly;
     border-radius: 0;
     scroll-behavior: auto;
-    /* background: linear-gradient(
-      to bottom,
-      #f7c3a9da,
-      #c17a53da,
-      #c17a53da,
-      #c17a53da,
-      #c17a53da,
-      #311b10da
-    ); */
+ 
   }
   .tool-menu {
     list-style: none;
@@ -277,7 +256,7 @@ em:current font size
     display: block;
     width: 100%;
     height: 100%;
-    /* background-color: red; */
+ 
   }
   .main-section {
     grid-template-columns: 1fr;
@@ -317,6 +296,7 @@ em:current font size
 
   #canvas-container {
     margin-left: 10px;
+    height: 462px;
 }
   
   .datatable {
@@ -331,8 +311,8 @@ em:current font size
     width: 120px;
   }
   #datatable1{
-    left : 250px;
-    top : 258px;
+    left : 170px;
+    top : 230px;
   }
   #datatable1 p{
     margin-bottom: 5px;
@@ -340,8 +320,8 @@ em:current font size
   }
   
   #datatable2{
-    left : 550px;
-    top : 258px;
+    left : 602px;
+    top : 230px;
   }
   #datatable2 p{
     margin-bottom: 5px;
@@ -359,17 +339,7 @@ em:current font size
   #variables{
     width: 100%;
   }
-  /* .variables-sections,
-  .control-sections {
-    padding: 1rem 1rem 2rem 1rem;
-    
-  
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-    width: 20rem;
-    margin-left: 25rem;
-  } */
+
 }
 
 /* **************************** */
@@ -411,7 +381,9 @@ em:current font size
     font-size: 16px;
      font-family: "Nunito", sans-serif;
   }
-  
+  div#newComment{
+    top: 5px;
+  }
   .datatable {
     width: 140px;
     font-size: 1.6rem;
@@ -424,13 +396,13 @@ em:current font size
     width: 120px;
   }
   #datatable1{
-    left : 253px;
-    top : 276px;
+    left : 137px;
+    top : 235px;
   }
   
   #datatable2{
-    left : 441px;
-    top : 276px;
+    left : 494px;
+    top : 235px;
   }
 
   #variables{
@@ -439,17 +411,7 @@ em:current font size
   .tool-list span {
     font-size: 1.6rem;
   }
-  /* .variables-sections,
-  .control-sections {
-    padding: 1rem 1rem 2rem 1rem;
   
-  
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-    width: 20rem;
-    margin-left: 24rem;
-  } */
 }
 
 /* **************************** */
@@ -472,7 +434,7 @@ em:current font size
   }
   .logo-div {
     width: 6.5rem;
-    /* padding: 0.8rem 0 0.8rem 3.3rem; */
+    
   }
   .main__task-div:nth-child(4) {
     margin-bottom: 6rem;
@@ -549,6 +511,7 @@ em:current font size
 
   #canvas-container {
     margin-left: 0;
+    height: 442px;
 }
   
   .datatable {
@@ -563,37 +526,27 @@ em:current font size
     width: 120px;
   }
   #datatable1{
-    left : 229px;
-    top : 269px;
+    left : 79px;
+    top : 232px;
   }
 
   
   #datatable2{
-    left : 392px;
-    top : 269px;
+    left : 338px;
+    top : 232px;
   }
   
   #titleincanvas {
     position: absolute;
-    left: 250px;
-    top: 90px;
+    left: 241px;
+    top: 76px;
   }
 
 
   #variables{
     width: 100%;
   }
-  /* .variables-sections,
-  .control-sections {
-    padding: 1rem 1rem 2rem 1rem;
-    
-  
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-    width: 20rem;
-    margin-left: 25rem;
-  } */
+ 
 }
 
 /* **************************** */
@@ -609,15 +562,14 @@ em:current font size
     padding: 0.2rem;
 
     font-size: 1.6rem;
-    /* text-align: center; */
+   
   }
   .logo-div {
     width: 4.5rem;
   }
   .div__control {
     gap: 2rem;
-    /* top: 1.8rem;
-    right: 1.5rem; */
+  
   }
   .ctrl-icons {
     width: 2.5rem;
@@ -651,7 +603,7 @@ em:current font size
     height: 100%;
     border: none;
     border-top: 1px solid rgba(177, 176, 176, 0.855);
-    /* background-color: red; */
+
   }
   .div__control img {
     width: 2.7rem;
@@ -662,8 +614,8 @@ em:current font size
   }
   div#commentboxleft {
     position: absolute;
-    left: 18px;
-    top: 442px;
+    left: 54px;
+    top: 64px;
     height: 65px;
     width: 285px;
     text-align: left;
@@ -714,27 +666,20 @@ em:current font size
   }
   #titleincanvas {
     position: absolute;
-    left: 90px;
+    left: 82px;
     top: 40px;
   }
 
   #canvas-container {
-    height: 458px;
+    height: 493px;
 }
   #variables{
     width: 100%;
   }
-  /* .variables-sections,
-  .control-sections {
-    padding: 1rem 1rem 2rem 1rem;
- 
-  
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-    width: 20rem;
-    margin-left: 2rem;
-  } */
+  div#newComment{
+    top: 12px;
+  }
+
 
   
 

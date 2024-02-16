@@ -95,10 +95,7 @@
             <img id="playpausebutton" onclick="simstate()" src="images/bluepausedull.svg" alt="" class="icons"/>
             <span class="playPause">Pause</span>
           </li>
-          <!-- <li class="tool-list">
-            <img id="rotationbutton"  onclick="rotstate()"  src="./images/graphbutton.svg" alt="" class="icons"/>
-            <span>Rotate</span>
-          </li> -->
+         
           <li class="tool-list">
          
            
@@ -113,10 +110,7 @@
           <div id="simulation" class="main__task-div">
             <div class="title-control-div">
               <h3 class="task-title">Simulation</h3>
-              <!-- <div id="controls" class="div__control">
-                <img id="playpausebutton" onclick="simstate()" src="images/bluepausedull.png" />
-                <img id="rotationbutton" onclick="rotstate()" src="images/bluecwdull.png" />
-              </div> -->
+             
             </div>
             
             <div class="canvas__div">
@@ -126,62 +120,29 @@
                 <canvas id="simscreen" height="400px" width="550px" ></canvas>
 
                 <div id="titleincanvas"></div>
+
                 <div id="datatable1" class="datatable"></div>
                 <div id="datatable2" class="datatable"></div>
+                <div id="newComment">
+                  <ul id="given">
+                    <li>AD=r1   AB=r2   BC=r3   CD=r4</li>
+                    <li>r1 is grounded</li>
+                    
+                    <li style="margin-left: 127px; margin-top: -27px;">r2 is given input</li>
+                
+                  </ul>
+                </div>
 
                 
-                <div id="commentboxleft"></div>
+                <!-- <div id="commentboxleft"></div> -->
                 <div id="commentboxright"></div>
               </div>
 
-              <!-- <div class="graph-div display-hide">
-                <canvas id="graphscreen1" class="canvas"></canvas>
-              </div>
-              <div class="graph-div display-hide">
-                <canvas id="graphscreen2" class="canvas"></canvas>
-              </div> -->
+              
 
             </div>
           </div>
-          <!-- <div id="variables" class="main__task-div">
-            <div class="settings-sections">
-              <h3 class="task-title">Variables</h3>
-                <div class="variables-sections"> -->
-
-                
-                <!-- <div class="var-div">
-                  <label for="r2spinner">r1 mm</label>
-                  <input class="var-spinner" id="r1spinner" name="value" />
-                  <div class="var-slider" id="r1slider"></div>
-                </div>
-                <div class="var-div">
-                  <label for="r2spinner">r2 (mm)</label>
-                  <input class="var-spinner" id="r2spinner" name="value" />
-                  <div class="var-slider" id="r2slider"></div>
-                </div>
-                <div class="var-div">
-                  <label for="r3spinner">r3 (mm)</label>
-                  <input class="var-spinner" id="r3spinner" name="value" />
-                  <div class="var-slider" id="r3slider"></div>
-                </div>
-                <div class="var-div">
-                  <label for="r4spinner">r4 (mm)</label>
-                  <input class="var-spinner" id="r4spinner" name="value" />
-                  <div class="var-slider" id="r4slider"></div>
-                </div>
-                <div class="var-div" id = "theta2set">
-                  <label for="theta2spinner">&theta;<sub>2</sub> (&deg;)</label>
-                  <input class="var-spinner" id="theta2spinner" name="value" />
-                  <div class="var-slider" id="theta2slider"></div>
-                </div>
-                <div class="var-div" id = "omega2set">
-                  <label for="omega2spinner">&omega;<sub>2</sub> (rad/s)</label>
-                  <input class="var-spinner" id="omega2spinner" name="value" />
-                  <div class="var-slider" id="omega2slider"></div>
-                </div>
-              </div>
-            </div>
-          </div> -->
+         
 		  
 
           <div id="variables" class="main__task-div">
@@ -217,13 +178,13 @@
                   <label for="theta2spinner">&theta;<sub>2</sub> </label>
                   <input class="var-spinner" id="theta2spinner" name="value" />
                   <div class="var-slider" id="theta2slider"></div>
-                  <span class="unit">(&deg;)</span>
+                  <span class="unit">&deg;</span>
                 </div>
                 <div class="var-div" id = "omega2set">
                   <label for="omega2spinner">&omega;<sub>2</sub> </label>
                   <input class="var-spinner" id="omega2spinner" name="value" />
                   <div class="var-slider" id="omega2slider"></div>
-                  <span class="unit">(rad/s)</span>
+                  <span class="unit">rad/s</span>
                 </div>
                 
 
@@ -231,48 +192,6 @@
             </div>
           </div>
 
-
-
-
-
-
-
-
-
-
-
-
-		  <!-- <div id="comments" class="main__task-div">
-            <h3 class="task-title">Controls</h3>
-              <div class="settings-sections">
-                <div class="control-sections">
-
-                 <button style="width:30%;">Add to table</button>
-			
-            <img id="playpausebutton" style="width:40px;" onclick="simstate()" src="./images/blueplaydull.svg" alt="" />
-                <img id="graphbutton" style="width:40px;" onclick="plotgraph()" src="./images/graphbutton.svg" alt="" />
-                
-              
-         
-                </div>
-              </div>
-          </div>
-
-          <div id="comments" class="main__task-div">
-            <h3 class="task-title">Results</h3>
-              <div class="settings-sections">
-                <div class="control-sections">
-
-                  <p id="p1">m = <span id="mass"></span></p>
-                  <p id="p2">k = <span id="k"></span></p>
-                  <p id="p3">c = <sapn id="c"></span></p>
-                    <div id="omegavalues">
-                      <p>&#969;<sub>n</sub> = <span id="wn"></span></p>
-                      <p>&#969;<sub>d</sub> = <span id="wd"></span></p> 
-                    </div>
-                </div>
-              </div>
-          </div> -->
           <div class="main__task-div footer">
             <p>Copyright © SOLVE The Virtual Lab @ NITK Surathkal</p>
           </div>
