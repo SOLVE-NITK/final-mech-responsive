@@ -73,7 +73,7 @@ function simstate() {
     imgfilename.lastIndexOf(".")
   );
   if (imgfilename == "bluepausedull") {
-    document.getElementById("playpausebutton").src = "images/blueplaydull.png";
+    document.getElementById("playpausebutton").src = "images/blueplaydull.svg";
     clearInterval(simTimeId);
     simstatus = 1;
     $("#alphaspinner").spinner("value", BOQ);
@@ -82,7 +82,7 @@ function simstate() {
   if (imgfilename == "blueplaydull") {
     time = 0;
     clearInterval(pauseTime);
-    document.getElementById("playpausebutton").src = "images/bluepausedull.png";
+    document.getElementById("playpausebutton").src = "images/bluepausedull.svg";
     simTimeId = setInterval("time=time+0.1; varupdate(); ", "100");
     simstatus = 0;
   }
@@ -96,11 +96,11 @@ function rotstate() {
     imgfilename.lastIndexOf(".")
   );
   if (imgfilename == "bluecwdull") {
-    document.getElementById("rotationbutton").src = "images/blueccwdull.png";
+    document.getElementById("rotationbutton").src = "images/blueccwdull.svg";
     rotstatus = -1;
   }
   if (imgfilename == "blueccwdull") {
-    document.getElementById("rotationbutton").src = "images/bluecwdull.png";
+    document.getElementById("rotationbutton").src = "images/bluecwdull.svg";
     rotstatus = 1;
   }
 }
