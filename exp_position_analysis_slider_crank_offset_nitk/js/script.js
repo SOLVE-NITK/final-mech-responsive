@@ -496,7 +496,7 @@ function drawrem(context) {
   context.fillText(
     "Quick Return Ratio = \u03B1/\u03B2 = " +
       roundd((t1 - t2) / (360 - t1 + t2), 2),
-    370,
+    300,
     15
   );
 
