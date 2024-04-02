@@ -384,7 +384,7 @@ function draw() {
   // ctx.clearRect(0, 0, 550, 400); //clears the complete canvas#simscreen everytime
 
   let width = 550,
-    height = 250;
+    height = 300;
   const dpi = window.devicePixelRatio;
 
   canvas = document.getElementById("simscreen");
@@ -396,8 +396,8 @@ function draw() {
   canvas.width = width * dpi;
   canvas.height = height * dpi;
 
-  canvas.style.width = canvas.parentElement.width / 2 + "px";
-  canvas.style.height = canvas.parentElement.height / 2 + "px";
+  canvas.style.width = canvas.parentElement.width + "px";
+  canvas.style.height = canvas.parentElement.height + "px";
 
   ctx.scale(dpi, dpi);
   ctx.clearRect(0, 0, 550, 400); //clears the complete canvas#simscreen everytime
@@ -471,17 +471,17 @@ function dispTables() {
   document.getElementById("datatable1").innerHTML =
     "<p>Open Configuration</p>\
 <table>\
-<tr><th>Angle</th><th>Value(&deg;)</th></tr>\
-<tr><td>&theta;<sub>2</sub></td><td>" +
+<tr><th>Angle</th><th class='data'>Value</th></tr>\
+<tr><td>&theta;<sub>2</sub>(&deg;)</td><td class='data'>" +
     roundd(theta2, 2) +
     "\
-<tr><td>&theta;<sub>3</sub></td><td>" +
+<tr><td>&theta;<sub>3</sub>(&deg;)</td><td class='data'>" +
     roundd(theta3, 2) +
     "\
-<tr><td>&theta;<sub>4</sub></td><td>" +
+<tr><td>&theta;<sub>4</sub>(&deg;)</td><td class='data'>" +
     roundd(theta4, 2) +
     "\
-<tr><td>&gamma;</td><td>" +
+<tr><td>&gamma;(&deg;)</td><td class='data'>" +
     roundd(gamma, 2) +
     "\
 </table>";
@@ -489,17 +489,17 @@ function dispTables() {
   document.getElementById("datatable2").innerHTML =
     "<p>Crossed Configuration</p>\
 <table>\
-<tr><th>Angle</th><th>Value(&deg;)</th></tr>\
-<tr><td>&theta;<sub>2</sub></td><td>" +
+<tr><th >Angle</th><th class='data'>Value</th></tr>\
+<tr><td>&theta;<sub>2</sub>(&deg;)</td><td class='data'>" +
     roundd(theta2, 2) +
     "\
-<tr><td>&theta;<sub>3</sub></td><td>" +
+<tr><td >&theta;<sub>3</sub>(&deg;)</td><td class='data'>" +
     roundd(theta3dash, 2) +
     "\
-<tr><td>&theta;<sub>4</sub></td><td>" +
+<tr><td >&theta;<sub>4</sub>(&deg;)</td class='data'><td>" +
     roundd(theta4dash, 2) +
     "\
-<tr><td>&gamma;</td><td>" +
+<tr><td >&gamma;(&deg;)</td><td class='data'>" +
     roundd(gamma, 2) +
     "\
 </table>"; // confirm why only gamma was being displayed in the flash simulation.

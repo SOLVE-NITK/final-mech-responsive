@@ -292,9 +292,18 @@ th {
   border: 1px solid black;
   padding: 0.25rem;
 }
+.data {
+  width: 100%;
+  padding: 0.25rem;
+}
 
 tr {
   text-align: center;
+}
+
+td:first-child,
+th:first-child {
+  padding: 0.25rem;
 }
 
 .datatable p {
