@@ -10,8 +10,7 @@ em:current font size
 /* **************************** */
 
 @media (min-width: 1200px) {
-
-  div#commentboxleft {
+  /* div#commentboxleft {
     position: absolute;
     left: 9px;
     top: 403px;
@@ -22,7 +21,7 @@ em:current font size
     font-weight: normal;
     font-family: "Nunito", sans-serif;
   }
-  
+
   div#commentboxright {
     position: absolute;
     left: 305px;
@@ -32,15 +31,14 @@ em:current font size
     text-align: right;
     font-size: 16px;
     font-family: "Nunito", sans-serif;
-  }
+  } */
 
-  #canvas-container {
+  /* #canvas-container {
     margin-left: 178px;
     height: 466px;
-}
-  
-  
-  .datatable {
+  } */
+
+  /* .datatable {
     width: 140px;
     font-size: 16px;
     text-align: center;
@@ -51,38 +49,33 @@ em:current font size
     border-collapse: collapse;
     width: 120px;
   }
-  #datatable1{
-    left : 206px;
-    top : 233px;
+  #datatable1 {
+    left: 206px;
+    top: 233px;
   }
-  #datatable1 p{
-  font-size: 14px;
+  #datatable1 p {
+    font-size: 14px;
+  }
 
+  #datatable2 {
+    left: 398px;
+    top: 233px;
   }
-  
-  #datatable2{
-    left : 398px;
-    top : 233px;
-  }
-   #datatable2 p{
-  font-size: 13px;
-
+  #datatable2 p {
+    font-size: 13px;
   }
   #titleincanvas {
     position: absolute;
     left: 292px;
     top: 60px;
   }
-  div#newComment{
+  div#newComment {
     top: 8px;
-  }
+  } */
 
-  #variables{
+  #variables {
     width: 201%;
   }
-  
-  
-
 }
 
 /* **************************** */
@@ -115,20 +108,19 @@ em:current font size
   .tool-list span {
     font-size: 1.2rem;
   }
-  div#newComment{
+  /* div#newComment {
     top: 25px;
-  }
+  } */
   .canvas {
     display: block;
     width: 100%;
     height: 100%;
-   
   }
   .div__control img {
     width: 3rem;
     height: 2.8rem;
   }
-  div#commentboxleft {
+  /* div#commentboxleft {
     position: absolute;
     left: 8px;
     top: 410px;
@@ -137,9 +129,9 @@ em:current font size
     text-align: left;
     font-size: 15px;
     font-weight: normal;
-     font-family: "Nunito", sans-serif;
+    font-family: "Nunito", sans-serif;
   }
-  
+
   div#commentboxright {
     position: absolute;
     left: 305px;
@@ -148,14 +140,14 @@ em:current font size
     width: 285px;
     text-align: right;
     font-size: 16px;
-     font-family: "Nunito", sans-serif;
-  }
+    font-family: "Nunito", sans-serif;
+  } */
 
-  #canvas-container {
+  /* #canvas-container {
     margin-left: 265px;
     height: 476px;
-}
-  
+  }
+
   .datatable {
     width: 140px;
     font-size: 16px;
@@ -167,29 +159,27 @@ em:current font size
     border-collapse: collapse;
     width: 120px;
   }
-  #datatable1{
-    left : 283px;
-    top : 280px;
+  #datatable1 {
+    left: 283px;
+    top: 280px;
   }
-  
-  #datatable2{
-    left : 550px;
-    top : 280px;
+
+  #datatable2 {
+    left: 550px;
+    top: 280px;
   }
-  
+
   #titleincanvas {
     position: absolute;
     left: 369px;
     top: 90px;
-  }
+  } */
   .tool-list span {
     font-size: 1.2rem;
   }
-  #variables{
+  /* #variables {
     width: 201%;
-  }
- 
-  
+  } */
 }
 
 /* **************************** */
@@ -224,7 +214,6 @@ em:current font size
     justify-content: space-evenly;
     border-radius: 0;
     scroll-behavior: auto;
- 
   }
   .tool-menu {
     list-style: none;
@@ -256,7 +245,6 @@ em:current font size
     display: block;
     width: 100%;
     height: 100%;
- 
   }
   .main-section {
     grid-template-columns: 1fr;
@@ -271,7 +259,7 @@ em:current font size
     border: none;
     border-top: 1px solid rgba(177, 176, 176, 0.855);
   }
-  div#commentboxleft {
+  /* div#commentboxleft {
     position: absolute;
     left: 18px;
     top: 398px;
@@ -280,9 +268,9 @@ em:current font size
     text-align: left;
     font-size: 15px;
     font-weight: normal;
-     font-family: "Nunito", sans-serif;
+    font-family: "Nunito", sans-serif;
   }
-  
+
   div#commentboxright {
     position: absolute;
     left: 305px;
@@ -291,14 +279,14 @@ em:current font size
     width: 285px;
     text-align: right;
     font-size: 16px;
-     font-family: "Nunito", sans-serif;
+    font-family: "Nunito", sans-serif;
   }
 
   #canvas-container {
     margin-left: 10px;
     height: 462px;
-}
-  
+  }
+
   .datatable {
     width: 140px;
     font-size: 16px;
@@ -310,36 +298,33 @@ em:current font size
     border-collapse: collapse;
     width: 120px;
   }
-  #datatable1{
-    left : 170px;
-    top : 230px;
+  #datatable1 {
+    left: 170px;
+    top: 230px;
   }
-  #datatable1 p{
+  #datatable1 p {
     margin-bottom: 5px;
+  }
 
+  #datatable2 {
+    left: 602px;
+    top: 230px;
   }
-  
-  #datatable2{
-    left : 602px;
-    top : 230px;
-  }
-  #datatable2 p{
+  #datatable2 p {
     margin-bottom: 5px;
-
   }
   #titleincanvas {
     position: absolute;
     left: 326px;
     top: 90px;
-  }
-  p{
+  } */
+  p {
     margin-bottom: 70px;
   }
 
-  #variables{
+  #variables {
     width: 100%;
   }
-
 }
 
 /* **************************** */
@@ -359,7 +344,7 @@ em:current font size
     border: none;
     border-top: 1px solid rgba(177, 176, 176, 0.855);
   }
-  div#commentboxleft {
+  /* div#commentboxleft {
     position: absolute;
     left: 18px;
     top: 407px;
@@ -368,9 +353,9 @@ em:current font size
     text-align: left;
     font-size: 15px;
     font-weight: normal;
-     font-family: "Nunito", sans-serif;
+    font-family: "Nunito", sans-serif;
   }
-  
+
   div#commentboxright {
     position: absolute;
     left: 305px;
@@ -379,9 +364,9 @@ em:current font size
     width: 285px;
     text-align: right;
     font-size: 16px;
-     font-family: "Nunito", sans-serif;
+    font-family: "Nunito", sans-serif;
   }
-  div#newComment{
+  div#newComment {
     top: 5px;
   }
   .datatable {
@@ -395,23 +380,22 @@ em:current font size
     border-collapse: collapse;
     width: 120px;
   }
-  #datatable1{
-    left : 137px;
-    top : 235px;
-  }
-  
-  #datatable2{
-    left : 494px;
-    top : 235px;
+  #datatable1 {
+    left: 137px;
+    top: 235px;
   }
 
-  #variables{
+  #datatable2 {
+    left: 494px;
+    top: 235px;
+  } */
+
+  #variables {
     width: 100%;
   }
   .tool-list span {
     font-size: 1.6rem;
   }
-  
 }
 
 /* **************************** */
@@ -434,7 +418,6 @@ em:current font size
   }
   .logo-div {
     width: 6.5rem;
-    
   }
   .main__task-div:nth-child(4) {
     margin-bottom: 6rem;
@@ -452,7 +435,7 @@ em:current font size
     border: none;
     border-top: 1px solid rgba(177, 176, 176, 0.855);
   }
-  div#commentboxleft {
+  /* div#commentboxleft {
     position: absolute;
     left: 18px;
     top: 501px;
@@ -461,9 +444,9 @@ em:current font size
     text-align: left;
     font-size: 15px;
     font-weight: normal;
-     font-family: "Nunito", sans-serif;
+    font-family: "Nunito", sans-serif;
   }
-  
+
   div#commentboxright {
     position: absolute;
     left: 305px;
@@ -472,9 +455,9 @@ em:current font size
     width: 285px;
     text-align: right;
     font-size: 16px;
-     font-family: "Nunito", sans-serif;
+    font-family: "Nunito", sans-serif;
   }
-  
+
   .datatable {
     width: 140px;
     font-size: 14px;
@@ -495,9 +478,9 @@ em:current font size
     text-align: left;
     font-size: 15px;
     font-weight: normal;
-     font-family: "Nunito", sans-serif;
+    font-family: "Nunito", sans-serif;
   }
-  
+
   div#commentboxright {
     position: absolute;
     left: 305px;
@@ -506,14 +489,14 @@ em:current font size
     width: 285px;
     text-align: right;
     font-size: 16px;
-     font-family: "Nunito", sans-serif;
+    font-family: "Nunito", sans-serif;
   }
 
   #canvas-container {
     margin-left: 0;
     height: 442px;
-}
-  
+  }
+
   .datatable {
     width: 140px;
     font-size: 16px;
@@ -525,28 +508,25 @@ em:current font size
     border-collapse: collapse;
     width: 120px;
   }
-  #datatable1{
-    left : 79px;
-    top : 232px;
+  #datatable1 {
+    left: 79px;
+    top: 232px;
   }
 
-  
-  #datatable2{
-    left : 338px;
-    top : 232px;
+  #datatable2 {
+    left: 338px;
+    top: 232px;
   }
-  
+
   #titleincanvas {
     position: absolute;
     left: 241px;
     top: 76px;
-  }
+  } */
 
-
-  #variables{
+  #variables {
     width: 100%;
   }
- 
 }
 
 /* **************************** */
@@ -554,22 +534,20 @@ em:current font size
 /* **************************** */
 @media (max-width: 34em) {
   .container {
-    padding: 0.5rem;
+    /* padding: 0.5rem; */
     gap: 1rem;
   }
 
   .title-div h1 {
     padding: 0.2rem;
 
-    font-size: 1.6rem;
-   
+    font-size: 1.8rem;
   }
   .logo-div {
     width: 4.5rem;
   }
   .div__control {
     gap: 2rem;
-  
   }
   .ctrl-icons {
     width: 2.5rem;
@@ -603,7 +581,6 @@ em:current font size
     height: 100%;
     border: none;
     border-top: 1px solid rgba(177, 176, 176, 0.855);
-
   }
   .div__control img {
     width: 2.7rem;
@@ -612,7 +589,7 @@ em:current font size
   .tooltip {
     font-size: 1rem;
   }
-  div#commentboxleft {
+  /* div#commentboxleft {
     position: absolute;
     left: 54px;
     top: 64px;
@@ -621,9 +598,9 @@ em:current font size
     text-align: left;
     font-size: 15px;
     font-weight: normal;
-     font-family: "Nunito", sans-serif;
+    font-family: "Nunito", sans-serif;
   }
-  
+
   div#commentboxright {
     position: absolute;
     left: 305px;
@@ -632,7 +609,7 @@ em:current font size
     width: 285px;
     text-align: right;
     font-size: 16px;
-     font-family: "Nunito", sans-serif;
+    font-family: "Nunito", sans-serif;
   }
   .datatable {
     width: 140px;
@@ -645,24 +622,21 @@ em:current font size
     border-collapse: collapse;
     width: 120px;
   }
-  #datatable1{
-    left : 25px;
-    top : 272px;
+  #datatable1 {
+    left: 25px;
+    top: 272px;
   }
-  
-  #datatable1 p{
-    margin-bottom: 5px;
 
+  #datatable1 p {
+    margin-bottom: 5px;
   }
-  #datatable2{
-    left : 150px;
-    top : 272px;
+  #datatable2 {
+    left: 150px;
+    top: 272px;
     margin-right: 5px;
   }
-  #datatable2 p{
+  #datatable2 p {
     margin-bottom: 5px;
-
-    
   }
   #titleincanvas {
     position: absolute;
@@ -672,20 +646,17 @@ em:current font size
 
   #canvas-container {
     height: 493px;
-}
-  #variables{
+  }
+  #variables {
     width: 100%;
   }
-  div#newComment{
+  div#newComment {
     top: 12px;
+  } */
+
+  .main__task-div footer p {
+    height: 1px;
   }
-
-
-  
-
-  .main__task-div footer p{
-  height: 1px;
-}
 }
 /* 
 
