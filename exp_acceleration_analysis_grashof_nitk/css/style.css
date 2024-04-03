@@ -342,8 +342,9 @@ canvas#simscreen {
   display: block;
   width: 80%;
   /* height: 100%; */
-  image-rendering: crisp-edges;
-  -moz-image-rendering: crisp-edges;
+  /* image-rendering: crisp-edges;
+  -moz-image-rendering: pixelated;
+  -webkit-image-rendering: crisp-edges; */
 }
 
 #graphscreen1,
