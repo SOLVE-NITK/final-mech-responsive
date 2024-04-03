@@ -57,6 +57,34 @@ function trythis()
 { 		alert();}
 */
 
+const PIXEL_RATIO = (function () {
+  const ctx = document.getElementById("simscreen").getContext("2d"),
+    dpr = window.devicePixelRatio || 1,
+    bsr =
+      ctx.webkitBackingStorePixelRatio ||
+      ctx.mozBackingStorePixelRatio ||
+      ctx.msBackingStorePixelRatio ||
+      ctx.oBackingStorePixelRatio ||
+      ctx.backingStorePixelRatio ||
+      1;
+
+  return dpr / bsr;
+})();
+
+const createHiDPICanvas = function (w, h, ratio) {
+  if (!ratio) {
+    ratio = PIXEL_RATIO;
+  }
+  const can = document.getElementById("simscreen");
+  can.width = w * ratio;
+  can.height = h * ratio;
+  // can.style.width = w + "px";
+  // can.style.height = h + "px";
+  can.style.width = can.parentElement.offsetWidth;
+  can.style.height = can.parentElement.offsetHeight;
+  can.getContext("2d").setTransform(ratio, 0, 0, ratio, 0, 0);
+  return can;
+};
 //change simulation specific css content. e.g. padding on top of variable to adjust appearance in variables window
 function editcss() {
   // $(".variable").css("padding-top", "20px");
@@ -380,26 +408,28 @@ function varupdate() {
 //Simulation graphics
 function draw() {
   // canvas = document.getElementById("simscreen");
-  // ctx = canvas.getContext("2d");
   // ctx.clearRect(0, 0, 550, 400); //clears the complete canvas#simscreen everytime
 
-  let width = 550,
-    height = 200;
-  const dpi = window.devicePixelRatio;
+  // let width = 550,
+  //   height = 200;
+  // const dpi = window.devicePixelRatio;
 
-  canvas = document.getElementById("simscreen");
+  // canvas = document.getElementById("simscreen");
+  // ctx = canvas.getContext("2d");
+  // ctx.webkitImageSmoothingEnabled = false;
+  // ctx.mozImageSmoothingEnabled = false;
+  // ctx.imageSmoothingEnabled = false;
+
+  // canvas.width = width * dpi;
+  // canvas.height = height * dpi;
+
+  // canvas.style.width = canvas.parentElement.width + "px";
+  // canvas.style.height = canvas.parentElement.height + "px";
+
+  // ctx.scale(dpi, dpi);
+  canvas = createHiDPICanvas(550, 300);
   ctx = canvas.getContext("2d");
-  ctx.webkitImageSmoothingEnabled = false;
-  ctx.mozImageSmoothingEnabled = false;
-  ctx.imageSmoothingEnabled = false;
 
-  canvas.width = width * dpi;
-  canvas.height = height * dpi;
-
-  canvas.style.width = canvas.parentElement.width + "px";
-  canvas.style.height = canvas.parentElement.height + "px";
-
-  ctx.scale(dpi, dpi);
   ctx.clearRect(0, 0, 550, 400); //clears the complete canvas#simscreen everytime
 
   if (flaggrashof) {

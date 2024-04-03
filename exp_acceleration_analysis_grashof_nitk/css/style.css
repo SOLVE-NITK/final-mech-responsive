@@ -202,9 +202,7 @@ h1 {
 
 .main__task-div:nth-child(4) {
   grid-column: 1/-1;
- 
 }
-
 
 .footer {
   font-size: 1.2rem;
@@ -248,6 +246,7 @@ h1 {
   background-color: #fff;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
   gap: 0;
   flex-wrap: wrap;
   flex-direction: row;
@@ -257,36 +256,31 @@ h1 {
 }
 canvas#simscreen2 {
   position: absolute;
- 
+
   top: 250px;
   height: 400px;
   width: 550px;
 }
 
-canvas#simscreen {
-  position: absolute; 
-  top: 66px;
-  height: 414px;
-  width: 557px;
-  left: 4em;
-  
-}
-.ab{
+.ab {
   margin-left: 150px;
 }
 
 #canvas-container {
+  grid-column: 1/-1;
+  grid-row: 2/3;
   display: flex;
   width: 100%;
+  height: 100%;
   /* height: 420px; */
-  height: 58rem;
   flex-direction: column;
+  position: relative;
 }
-#canvas {
+/* #canvas {
   border-left: 1px solid rgba(177, 176, 176, 0.855);
   width: 100%;
   height: 100%;
-}
+} */
 .comments_sec {
   display: flex;
   align-items: center;
@@ -298,7 +292,6 @@ canvas#simscreen {
   flex-direction: column;
   align-items: center;
   justify-content: center;
- 
 }
 
 .circuit-dia {
@@ -344,10 +337,13 @@ canvas#simscreen {
 .cross-img:hover span {
   display: block;
 }
-.canvas {
+canvas#simscreen {
+  align-self: center;
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  /* height: 100%; */
+  image-rendering: crisp-edges;
+  -moz-image-rendering: crisp-edges;
 }
 
 #graphscreen1,
@@ -385,31 +381,31 @@ canvas#simscreen {
 /*  } */
 .var-div {
   display: flex;
-  flex-direction: column; 
-  align-items: center; 
-  gap: 1rem; 
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 .input-container {
   display: flex;
-  flex-direction: row; 
-  align-items: center; 
-  gap: 1rem; 
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
   z-index: 1;
 }
 
 label {
-  margin-right: 1rem; 
+  margin-right: 1rem;
 }
 
 .var-spinner {
-  flex: 1; 
+  flex: 1;
 }
 
 .var-slider {
   width: 150px;
-  margin-left: 3.5rem; 
+  margin-left: 3.5rem;
 }
-.mm1{
+.mm1 {
   margin-right: 22px;
 }
 /********************************************/
@@ -422,9 +418,15 @@ label {
   height: 100%;
 }
 
-
 .datatable {
-  position:relative;
+  grid-row: 3/4;
+  grid-column: 1/-1;
+  justify-self: center;
+  margin-bottom: 0.5rem;
+}
+
+/* .datatable {
+  position: relative;
   width: 80px;
   font-size: 12px;
   text-align: center;
@@ -436,9 +438,6 @@ label {
   width: 120px;
   margin-top: 110px;
   margin-left: 410px;
-  
-  
-  
 }
 .datatable th {
   border: 1px solid #000011;
@@ -452,42 +451,64 @@ label {
   position: relative;
   font-size: 10px;
   left: -10px;
-}
+} */
 
 #legendicon {
   background-image: url("../images/legendicon.png");
   position: absolute;
-  left: 710px;
-  top: 578px;
-  height: 24px;
-  width: 24px;
+  bottom: 2rem;
+  right: 2rem;
+  /* height: 5%; */
+  /* width: 100%; */
+  width: 3.2rem;
+  height: 3.2rem;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  object-position: center;
   border: double;
 }
-#legend {
-  position: absolute;
-  left:490px;
-  top: 500px;
-  height: 0px;
-  width: 220px;
-  border: solid 0px;
-  z-index:100;
-  overflow: hidden;
- 
-}
-#legendicon:active ~ #legend,
-#legendicon:hover + #legend {
-  height: 80px;
-  border: solid 1px; 
-}
-#titleincanvas {
-  position:absolute;
-  left: 300px;
-  top: 38px;
-  font-family: "Nunito",sans-serif;
-  
 
+#legendicon::before {
+  content: url("../images/legend4BARacc.png");
+  left: -20rem;
+  top: -2rem;
+  background-size: cover;
+  position: absolute;
+  display: block;
+  width: 3.2rem;
+  height: 3.2rem;
+  -webkit-transform: scale(0.2);
+  -moz-transform: scale(0.2);
+  transform: scale(0.8);
+  visibility: hidden;
 }
-div#commentboxleft {
+
+#legendicon:hover::before,
+#legendicon:active::before {
+  visibility: visible;
+}
+/* #legendicon:not(:hover)::before,
+#legendicon:not(:active)::before {
+  visibility: hidden;
+} */
+/* #legend {
+  position: absolute;
+  bottom: 5rem;
+  right: 2rem;
+  z-index: 100;
+  overflow: hidden;
+}
+#legendicon:active ~ #legend #legendicon:hover + #legend {
+  height: 80px;
+  border: solid 1px;
+} */
+
+#titleincanvas {
+  grid-row: 1/2;
+  grid-column: 1/-1;
+  justify-self: center;
+}
+/* div#commentboxleft {
   position: absolute;
   left: 50px;
   top: 480px;
@@ -495,30 +516,33 @@ div#commentboxleft {
   width: 285px;
   text-align: left;
   font-size: 16px;
-  
 }
 div#commentboxright {
   position: absolute;
-  left:450px;
+  left: 450px;
   top: 480px;
   height: 65px;
   width: 285px;
   text-align: right;
   font-size: 16px;
-  
-}
-div#newComment{
-  position: relative;
-  left: 10px;
-  top: 20px;
-  font-family: "Nunito", sans-serif;
-  font-size: 15px;
-  width:auto;
-  padding: 1px 22px;
-  margin-top: 130px;
-  margin-left: 10px;
-  z-index: 1;
- 
+} */
+div#newComment {
+  grid-row: 4/5;
+  grid-column: 1/-1;
+  border-top: 1px dotted black;
+  padding: 0.5rem 2.5rem;
 }
 
+table,
+tr,
+td,
+th {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
 
+td,
+th {
+  width: 6rem;
+  text-align: center;
+}
