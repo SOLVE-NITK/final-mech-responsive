@@ -384,7 +384,7 @@ function draw() {
   // ctx.clearRect(0, 0, 550, 400); //clears the complete canvas#simscreen everytime
 
   let width = 550,
-    height = 300;
+    height = 200;
   const dpi = window.devicePixelRatio;
 
   canvas = document.getElementById("simscreen");

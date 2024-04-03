@@ -10,17 +10,17 @@ em:current font size
 /* **************************** */
 
 @media (min-width: 1200px) {
-  .datatable {
+  /* .datatable {
     width: 140px;
     font-size: 16px;
     text-align: center;
   }
-  
-  #datatable1{
+
+  #datatable1 {
     left: 451px;
     top: 100px;
-  }
-  div#commentboxleft {
+  } */
+  /* div#commentboxleft {
     left: 18px;
     top: 501px;
     height: 65px;
@@ -33,18 +33,15 @@ em:current font size
     height: 65px;
     width: 285px;
     font-size: 16px;
+  } */
+  #variables {
+    width: 201%;
   }
-  #variables{
-    width:201%;
-  }
-  #titleincanvas {
+  /* #titleincanvas {
     position: absolute;
     left: 291px;
     top: 43px;
-  }
-
-
-  
+  } */
 }
 
 /* **************************** */
@@ -86,22 +83,22 @@ em:current font size
     width: 3rem;
     height: 2.8rem;
   }
-  .datatable {
+  /* .datatable {
     width: 140px;
     font-size: 16px;
     text-align: center;
-  }
-  #titleincanvas {
+  } */
+  /* #titleincanvas {
     position: absolute;
     left: 380px;
     top: 56px;
-  }
-  
-  #datatable1{
+  } */
+
+  /* #datatable1 {
     left: 581px;
     top: 100px;
-  }
-  div#commentboxleft {
+  } */
+  /* div#commentboxleft {
     left: 57px;
     top: 501px;
     height: 65px;
@@ -114,14 +111,11 @@ em:current font size
     height: 65px;
     width: 285px;
     font-size: 16px;
+  } */
+  #variables {
+    width: 201%;
   }
-  #variables{
-    width:201%;
-  }
- 
-  
 }
-
 
 /* **************************** */
 /* Below 944px ( Tablets) */
@@ -135,11 +129,11 @@ em:current font size
     flex-direction: column;
   }
 
-  #titleincanvas {
+  /* #titleincanvas {
     position: absolute;
     left: 325px;
     top: 53px;
-  }
+  } */
   .title-div h1 {
     font-size: 2rem;
   }
@@ -197,7 +191,7 @@ em:current font size
     grid-template-columns: 1fr;
   }
   .canvas__div {
-    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr; */
   }
   .canvas {
     display: block;
@@ -206,12 +200,12 @@ em:current font size
     border: none;
     border-top: 1px solid rgba(177, 176, 176, 0.855);
   }
-  
-  #datatable1{
+
+  /* #datatable1 {
     left: 533px;
     top: 100px;
-  }
-  div#commentboxleft {
+  } */
+  /* div#commentboxleft {
     left: 62px;
     top: 501px;
     height: 65px;
@@ -224,14 +218,13 @@ em:current font size
     height: 65px;
     width: 285px;
     font-size: 16px;
+  } */
+  #variables {
+    width: 100%;
   }
-  #variables{
-    width:100%;
+  p {
+    margin-bottom: 65px;
   }
-  p{
-    margin-bottom: 65px; 
-  }
-
 }
 
 /* **************************** */
@@ -242,7 +235,7 @@ em:current font size
     grid-template-columns: 1fr;
   }
   .canvas__div {
-    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr; */
   }
   .canvas {
     display: block;
@@ -251,15 +244,15 @@ em:current font size
     border: none;
     border-top: 1px solid rgba(177, 176, 176, 0.855);
   }
-  
+
   .tool-list span {
     font-size: 1.6rem;
   }
-  #datatable1{
+  /* #datatable1 {
     left: 458px;
     top: 100px;
-  }
-  div#commentboxleft {
+  } */
+  /* div#commentboxleft {
     left: 57px;
     top: 501px;
     height: 65px;
@@ -272,27 +265,26 @@ em:current font size
     height: 65px;
     width: 285px;
     font-size: 16px;
+  } */
+  #variables {
+    width: 100%;
   }
-  #variables{
-    width:100%;
-  }
-  #titleincanvas {
+  /* #titleincanvas {
     position: absolute;
     left: 279px;
     top: 52px;
-  }
- p{
-    margin-bottom: 70px; 
+  } */
+  p {
+    margin-bottom: 70px;
   }
 }
-
 
 /* **************************** */
 /* Below 704px (Smaller Tablets) */
 /* **************************** */
 @media (max-width: 44em) {
   .canvas__div {
-    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr; */
   }
   .img-div {
     flex-direction: column;
@@ -324,16 +316,16 @@ em:current font size
     border: none;
     border-top: 1px solid rgba(177, 176, 176, 0.855);
   }
-  #datatable1{
+  /* #datatable1 {
     left: 368px;
     top: 100px;
-  }
-  #titleincanvas {
+  } */
+  /* #titleincanvas {
     position: absolute;
     left: 223px;
     top: 52px;
-  }
-  div#commentboxleft {
+  } */
+  /* div#commentboxleft {
     left: 18px;
     top: 501px;
     height: 65px;
@@ -346,12 +338,10 @@ em:current font size
     height: 65px;
     width: 285px;
     font-size: 16px;
+  } */
+  p {
+    margin-bottom: 70px;
   }
-  p{
-    margin-bottom: 70px; 
-  }
-  
-  
 }
 
 /* **************************** */
@@ -359,10 +349,13 @@ em:current font size
 /* **************************** */
 @media (max-width: 34em) {
   .container {
-    padding: 0.5rem;
+    /* padding: 0.5rem; */
     gap: 1rem;
   }
 
+  .logo-div {
+    width: 4rem;
+  }
   .title-div h1 {
     /* padding: 0.2rem; */
 
@@ -416,21 +409,39 @@ em:current font size
     font-size: 1rem;
   }
 
-  #canvas-container {
-    width: 100%;
-    height: 75rem;
+  .canvas__div {
+    grid-template-columns: 1fr;
   }
+
+  #titleincanvas {
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+  }
+  #canvas-container {
+    grid-column: 1/-1;
+  }
+
   .datatable {
+    grid-row: 3/4;
+    grid-column: 1/-1;
+    padding: 0.5rem;
+  }
+
+  .comments {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  /* .datatable {
     width: 140px;
     font-size: 12px;
     text-align: center;
   }
-  
-  #datatable1{
+
+  #datatable1 {
     left: 100px;
     top: 465px;
-  }
-  div#commentboxleft {
+  } */
+  /* div#commentboxleft {
     left: 60px;
     top: 700px;
     text-align: left;
@@ -443,25 +454,24 @@ em:current font size
     text-align: left;
     font-size: 13px;
     font-family: "Nunito", sans-serif;
-    
-
-  }
+  } */
   label,
   select,
   input,
   p {
     display: inline-block;
     font-size: 1.5rem;
-  } 
-  p{
-    margin-bottom: 60px; 
   }
-  #titleincanvas {
+
+  .footer {
+    font-size: 1.2rem;
+  }
+
+  /* #titleincanvas {
     position: absolute;
     left: 100px;
     top: 53px;
-  }
- 
+  } */
 }
 /* 
 
