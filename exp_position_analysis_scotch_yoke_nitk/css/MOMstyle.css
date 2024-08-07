@@ -1,4 +1,9 @@
-
+canvas#simscreen {
+  width: 100%;
+  height: 81%;
+  left: 0;
+  top: 0;
+}
 .varname {
   position: relative;
   font-size: 14px;
@@ -49,3 +54,35 @@
   width: 24px;
   border: double;
 }
+#legendicon {
+  background-image: url("../images/legendicon.png");
+  position: absolute;
+  left: 564px;
+  top: 471px;
+  height: 24px;
+  width: 24px;
+  border: double;
+}
+#quickref {
+  position: absolute;
+  left: 600px;
+  top: 225px;
+  height: 100px;
+  width: 0px;
+  border: solid 0px;
+  z-index: 99;
+  overflow: hidden;
+}
+#legend {
+  position: absolute;
+  left: 300px;
+  top: 95px;
+  height: 0px;
+  width: 100px;
+  border: solid 0px;
+  z-index: 100;
+  overflow: hidden;
+}
+
+
+

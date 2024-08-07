@@ -150,7 +150,7 @@ em:current font size
     margin-bottom: 6rem;
   }
   .tool-list span {
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
   .canvas {
     display: block;
@@ -170,7 +170,7 @@ em:current font size
     border: none;
     border-top: 1px solid rgba(177, 176, 176, 0.855);
   }
-div#commentboxleft {
+/* div#commentboxleft {
   left: 25px;
   top: 610  px;
   font-size: 15px;
@@ -183,7 +183,7 @@ div#commentboxright {
   text-align: left;
   font-size: 18px;
   
-}
+} */
 #variables{
   width: 100%;
 }
@@ -207,36 +207,36 @@ div#commentboxright {
     border: none;
     border-top: 1px solid rgba(177, 176, 176, 0.855);
   }
-  .datatable {
+  /* .datatable {
     position:relative;
     top: 50px;
     width: 80px;
     font-size: 12px;
    
     text-align: center;
-  }
-  .datatable table {
+  } */
+  /* .datatable table {
     border: 1px solid #000011;
     border-collapse: collapse;
     width: 120px;
     margin-top: 315px;
     margin-left: 0;
-  }
-  div#commentboxleft {
+  } */
+  /* div#commentboxleft {
     left: 31em;
     top: 34em;
     font-size: 18px;
     
-  }
-  div#commentboxright {
+  } */
+  /* div#commentboxright {
     position: absolute;
     left:400px;
     top: 520px;
     text-align: left;
     font-size: 18px;
     
-  }
-  #legendicon {
+  } */
+  /* #legendicon {
     background-image: url("../images/legendicon.png");
     position: absolute;
     left: 650px;
@@ -249,7 +249,7 @@ div#commentboxright {
   #legendicon:hover + #legend {
     height: 80px; 
     border: solid 1px; 
-  }
+  } */
   #variables{
     width: 100%;
   }
@@ -261,12 +261,12 @@ div#commentboxright {
 @media (max-width:768px){
   #canvas-container {
     width: 100%;
-    height: 70rem;
+    /* height: 70rem; */
   }
-  div#newComment {
+  /* div#newComment {
     margin-top: 74px;
      
-   }
+   } */
 }
 /* **************************** */
 /* Below 704px (Smaller Tablets) */
@@ -287,8 +287,7 @@ div#commentboxright {
     height: 0.6rem;
   }
   .logo-div {
-    width: 8.5rem;
-    /* padding: 0.8rem 0 0.8rem 3.3rem; */
+    width: 6rem;
   }
   .main__task-div:nth-child(4) {
     margin-bottom: 6rem;
@@ -306,19 +305,19 @@ div#commentboxright {
     border: none;
     border-top: 1px solid rgba(177, 176, 176, 0.855);
   }
-  #canvas-container {
+  /* #canvas-container {
     width: 100%;
     height: 70rem;
-  }
+  } */
   
-  .datatable {
+  /* .datatable {
     position:relative;
     width: 80px;
     font-size: 12px;
     text-align: center;
     left: 180px;
-  }
-  #legendicon {
+  } */
+  /* #legendicon {
     background-image: url("../images/legendicon.png");
     position: absolute;
     left: 470px;
@@ -327,8 +326,8 @@ div#commentboxright {
     width: 24px;
     border: double;
     z-index: 101;
-  }
-  #legend {
+  } */
+  /* #legend {
     position: absolute;
     left: 249px;
     top: 515px;
@@ -337,12 +336,12 @@ div#commentboxright {
     border: solid 0px;
     z-index: 100;
     overflow: hidden;
-  }
-  #legendicon:active ~ #legend,
+  } */
+  /* #legendicon:active ~ #legend,
   #legendicon:hover + #legend {
     height: 80px; 
     border: solid 1px; 
-  }
+  } */
   #quickref {
     position: absolute;
     left: 600px;
@@ -354,24 +353,24 @@ div#commentboxright {
     overflow: hidden;
   }
 
-  div#commentboxleft {
+  /* div#commentboxleft {
     left: 28em;
     top: 45em;
     font-size: 15px;
     
-  }
-  div#commentboxright {
+  } */
+  /* div#commentboxright {
     position: absolute;
     left:10px;
     top: 650px;
     text-align: left;
     font-size: 15px;
     
-  }
-  div#newComment {
+  } */
+  /* div#newComment {
     margin-top: 74px;
      
-   }
+   } */
   #variables{
     width: 100%;
   }
@@ -383,7 +382,7 @@ div#commentboxright {
 /* **************************** */
 @media (max-width: 34em) {
   .container {
-    padding: 0.5rem;
+    /* padding: 0.5rem; */
     gap: 1rem;
   }
 
@@ -424,13 +423,11 @@ div#commentboxright {
   .sidebar {
     border-radius: 0;
   }
-  .canvas {
+  canvas {
     display: block;
     width: 100%;
     height: 100%;
     border: none;
-    border-top: 1px solid rgba(177, 176, 176, 0.855);
-    /* background-color: red; */
   }
   .div__control img {
     width: 2.7rem;
@@ -439,30 +436,28 @@ div#commentboxright {
   .tooltip {
     font-size: 1rem;
   }
-  canvas#simscreen {
-    position: absolute;
-    left: 0px;
-    top: 66px;
-    height: 414px;
-    width: 320px;
-    
+  canvas {
+    width: 100%;
+    display: block;
   }
-    .datatable {
-      position:relative;
-      width: 80px;
-      font-size: 10px;
-      text-align: center;
-      left:0px;
-    }
-    .datatable table {
+  .datatable {
+    font-size: 1.2rem;
+    padding: 0.25rem;
+  }
+  
+  #newComment {
+    font-size: 1.4rem;
+  }
+
+    /* .datatable table {
       border: 1px solid #000011;
       border-collapse: collapse;
       width: 120px;
       margin-top: 385px;
       margin-left: 10px;
-    }
+    } */
   
-    #legendicon {
+    /* #legendicon {
       background-image: url("../images/legendicon.png");
       position: absolute;
       left: 278px;
@@ -470,8 +465,8 @@ div#commentboxright {
       height: 24px;
       width: 24px;
       border: double;
-    }
-    #legend {
+    } */
+    /* #legend {
       position: absolute;
       left:60px;
       top: 380px;
@@ -480,14 +475,14 @@ div#commentboxright {
       border: solid 0px;
       z-index:100;
       overflow: hidden;
-    }
-    #legendicon:active ~ #legend,
+    } */
+    /* #legendicon:active ~ #legend,
     #legendicon:hover + #legend {
       height: 80px; 
       border: solid 1px;
       width: 215px;
-    }
-    
+    } */
+/*     
     div#commentboxleft {
       left: 2em;
       top: 48em;
@@ -502,12 +497,12 @@ div#commentboxright {
       font-size: 16px;
       
     }
-  
-    #canvas-container {
-      width: 100%;
-      height: 80rem;
-    }
-    #titleincanvas {
+   */
+   #canvas-container {
+    width: 100%;
+    /* height: 75rem; */
+  }
+    /* #titleincanvas {
       position:absolute;
       left: 120px;
       top: 48px;
@@ -518,9 +513,17 @@ div#commentboxright {
       margin-top: 30px;
       font-size: 14px;
        
-     }
+     } */
   #variables{
     width: 100%;
+  }
+  canvas#simscreen {
+    align-self: center;
+    display: block;
+    width: 100%;
+    /* height: 100%; */
+    image-rendering: crisp-edges;
+    -moz-image-rendering: crisp-edges;
   }
   
   

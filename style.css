@@ -52,7 +52,7 @@ body {
   /* align-items: center; */
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .col {
@@ -71,6 +71,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .col:hover {
@@ -116,6 +117,28 @@ body {
 
 .link:active {
   text-decoration: none;
+}
+
+.lab {
+  position: absolute;
+  right: 0rem;
+  bottom: 0rem;
+  font-size: 1.2rem;
+  /* background-color: #081c166b; */
+  border-top: 2px solid #192a7e;
+  border-left: 2px solid #192a7e;
+  padding: 0.2rem 0.5rem;
+  text-transform: lowercase;
+  /* aspect-ratio: 1; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  /* transform: rotate(-45deg); */
+}
+.col:hover .lab {
+  border-top: 2px solid #f0f2f8;
+  border-left: 2px solid #f0f2f8;
 }
 
 .search {

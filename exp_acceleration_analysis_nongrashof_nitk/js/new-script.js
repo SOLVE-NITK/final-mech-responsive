@@ -75,14 +75,42 @@ var kar = 0;
 function trythis()
 { 		alert();}
 */
+const PIXEL_RATIO = (function () {
+  var ctx = document.createElement("canvas").getContext("2d"),
+    dpr = window.devicePixelRatio || 1,
+    bsr =
+      ctx.webkitBackingStorePixelRatio ||
+      ctx.mozBackingStorePixelRatio ||
+      ctx.msBackingStorePixelRatio ||
+      ctx.oBackingStorePixelRatio ||
+      ctx.backingStorePixelRatio ||
+      1;
+
+  return dpr / bsr;
+})();
+
+const createHiDPICanvas = function (w, h, ratio) {
+  if (!ratio) {
+    ratio = PIXEL_RATIO;
+  }
+  var can = document.getElementById("simscreen");
+  can.width = w * ratio;
+  can.height = h * ratio;
+  // can.style.width = w + "px";
+  // can.style.height = h + "px";
+  can.style.width = can.parentElement.offsetWidth;
+  can.style.height = can.parentElement.offsetHeight;
+  can.getContext("2d").setTransform(ratio, 0, 0, ratio, 0, 0);
+  return can;
+};
 
 //change simulation specific css content. e.g. padding on top of variable to adjust appearance in variables window
 function editcss()
 {
 $('.variable').css('padding-top','20px');
-$('#datatable1').css('position','absolute');
-$('#datatable1').css('left','50px');
-$('#datatable1').css('top','410px');
+  // $('#datatable1').css('position','absolute');
+  // $('#datatable1').css('left','50px');
+  // $('#datatable1').css('top','410px');
 $('#legend').css("width",document.getElementById('legendimg').width+"px");
 $('#legendicon').css("top","471px");
 }
@@ -511,7 +539,10 @@ draw();
 //Simulation graphics
 function draw()
 {
-  canvas = document.getElementById("simscreen");
+  // canvas = document.getElementById("simscreen");
+  canvas = createHiDPICanvas(550, 400);
+
+  
   ctx = canvas.getContext("2d");
   ctx.clearRect(0,0,550,400);  //clears the complete canvas#simscreen everytime
   if (flaggrashof)
@@ -569,28 +600,28 @@ ctx.translate(0.5,0);
    ctx.fillStyle="#000000";
    //displaying scale values
   if(scaleP>=1)
-  ctx.fillText("Position Diagram (Scale = 1:"+scaleP+")",50,50);
+  ctx.fillText("Position Diagram (Scale = 1:"+scaleP+")",20,50);
   if(scaleP<1)
   ctx.fillText("Position Diagram (Scale = "+1/scaleP+":1)",50,50);
   
   if(kar==1){
-  ctx.fillText("Velocity Diagram (Scale = 1:"+scaleV+")",250,50);
+  ctx.fillText("Velocity Diagram (Scale = 1:"+scaleV+")",300,50);
   }
   else{
 
   if(scaleV>=1)
-  ctx.fillText("Velocity Diagram (Scale = 1:"+scaleV+")",350,50);
+  ctx.fillText("Velocity Diagram (Scale = 1:"+scaleV+")",300,50);
   if(scaleV<1)
-  ctx.fillText("Velocity Diagram (Scale = "+1/scaleV+":1)",350,50);
+  ctx.fillText("Velocity Diagram (Scale = "+1/scaleV+":1)",300,50);
   }
 
   
 
 
   if(scaleA>=1)
-  ctx.fillText("Acceleration Diagram (Scale = 1:"+scaleA+")",150,300);
+  ctx.fillText("Acceleration Diagram (Scale = 1:"+scaleA+")",200,320);
   if(scaleA<1)
-  ctx.fillText("Acceleration Diagram (Scale = "+1/scaleA+":1)",150,300);
+  ctx.fillText("Acceleration Diagram (Scale = "+1/scaleA+":1)",200,320);
   ctx.restore();
   ctx.restore();
 drawvel(ctx);
@@ -674,12 +705,23 @@ function checkGrashof()
 	if (s+l>p+q)
 	{ 
 		flaggrashof=false;
-		
+		document.getElementById("canvas-container").style.display="block";
+    document.getElementById("datatable1").style.visibility = "visible";
+    document.getElementById("titleincanvas").style.visibility = "visible";
+    document.getElementById("commentboxright1").style.visibility = "hidden";
+    document.getElementById("newComment").style.visibility = "visible";
 	}
 	else 
 	{
 		flaggrashof=true;
-
+     
+    document.getElementById("commentboxright1").style.visibility = "visible";
+    document.getElementById("commentboxright1").innerHTML = 
+        'This simulation is exclusively for non-Grashof Combinations.<br> Please change the slider value</div>';
+    document.getElementById("titleincanvas").style.visibility = "hidden";
+    document.getElementById("canvas-container").style.display="none";
+    document.getElementById("datatable1").style.visibility = "hidden";
+    document.getElementById("newComment").style.visibility = "hidden";
 	}
 }
 
@@ -785,27 +827,27 @@ function printcomment(commenttext,commentloc)
 {
   if(commentloc==0)
   {
-  document.getElementById('commentboxright').style.visibility='hidden';
-  document.getElementById('commentboxleft').style.width='570px';
-  document.getElementById('commentboxleft').innerHTML = commenttext;
+  // document.getElementById('commentboxright').style.visibility='hidden';
+  // document.getElementById('commentboxleft').style.width='570px';
+  // document.getElementById('commentboxleft').innerHTML = commenttext;
   }
   else if(commentloc==1)
   {
-  document.getElementById('commentboxright').style.visibility='visible';
-  document.getElementById('commentboxleft').style.width='285px';
-  document.getElementById('commentboxleft').innerHTML = commenttext;
+  // document.getElementById('commentboxright').style.visibility='visible';
+  // document.getElementById('commentboxleft').style.width='285px';
+  // document.getElementById('commentboxleft').innerHTML = commenttext;
   }
   else if(commentloc==2)
   {
-  document.getElementById('commentboxright').style.visibility='visible';
-  document.getElementById('commentboxleft').style.width='285px';
-  document.getElementById('commentboxright').innerHTML = commenttext;
+  // document.getElementById('commentboxright').style.visibility='visible';
+  // document.getElementById('commentboxleft').style.width='285px';
+  // document.getElementById('commentboxright').innerHTML = commenttext;
   }
   else
   {
-  document.getElementById('commentboxright').style.visibility='hidden';
-  document.getElementById('commentboxleft').style.width='570px';
-  document.getElementById('commentboxleft').innerHTML = "<center>please report this issue to adityaraman@gmail.com</center>"; 
+  // document.getElementById('commentboxright').style.visibility='hidden';
+  // document.getElementById('commentboxleft').style.width='570px';
+  // document.getElementById('commentboxleft').innerHTML = "<center>please report this issue to adityaraman@gmail.com</center>"; 
   // ignore use of deprecated tag <center> . Code is executed only if printcomment function receives inappropriate commentloc value
   }
 }

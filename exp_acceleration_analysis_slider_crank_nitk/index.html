@@ -88,11 +88,11 @@
               >
               <span>Variables</span>
           </li>
-          <li class="tool-list">
+          <li class="tool-list" title="Play/Pause">
             <img id="playpausebutton" onclick="simstate()" src="images/bluepausedull.svg" alt="" class="icons"/>
             <span class="playPause">Pause</span>
           </li>
-          <li class="tool-list">
+          <li class="tool-list" title="Rotate">
             <img id="rotationbutton" onclick="rotstate()" src="images/bluecwdull.svg" alt="" class="icons" />          
               <span class="">Rotate</span>
           </li>
@@ -103,15 +103,16 @@
           <div id="simulation" class="main__task-div">
               <h3 class="task-title">Simulation</h3>            
             <div class="canvas__div">
+              <div id="titleincanvas"></div>
               <div id="canvas-container">
-                <canvas id="simscreen" height="400px" width="550px" class="canvas"></canvas>
+                <canvas id="simscreen" height="400px" width="550px"></canvas>
                 <p id="va"></p>
                 <p id="vba"></p>
                 <p id="vb"></p>
               </div>
-              <div id="titleincanvas"></div>
+             
               <div id="datatable1" class="datatable"></div>
-              <div id="datatable2" ></div>
+              <!-- <div id="datatable2" ></div> -->
              
               <div id="legendicon" title="Legend" onclick="showLegend();"></div>
               <div id="legend"><img id="legendimg" src="images/legendSCacc.png"></img></div>

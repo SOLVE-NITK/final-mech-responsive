@@ -22,7 +22,7 @@ html {
 }
 
 body {
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.6;
   font-size: 1.6rem;
   position: relative;
@@ -45,14 +45,7 @@ h3 {
   left: -5rem;
 }
 
-.ui-widget input,
-.ui-selectmenu-button,
-.ui-widget textarea,
-.ui-widget button,
-.ui-select option {
-  font-family: "Nunito", sans-serif;
-  font-size: 1.6rem;
-}
+
 
 /* select menu */
 .ui-selectmenu-button {
@@ -61,13 +54,15 @@ h3 {
 
 /*majorly modified here*/
 .ui-spinner {
-  width: 10rem;
-  text-align: center;
-  display: inline-block;
-  overflow: hidden;
-  padding: 0;
-  vertical-align: middle;
-  border: 0 none;
+  width: 12rem;
+    text-align: center;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0;
+    vertical-align: middle;
+    border: 0 none;
+    margin-left: -17rem;
+  
 }
 .ui-spinner-input {
   width: inherit;
@@ -146,7 +141,6 @@ h3 {
   background-position: 0 0;
 }
 .ui-slider .ui-slider-range {
-  /* background: #a3cae0; */
   background: #02498036;
   position: absolute;
   z-index: 1;
@@ -155,15 +149,12 @@ h3 {
   border: 0;
   background-position: 0 0;
 }
-/* .ui-slider .ui-slider-range {
-  -moz-box-shadow: 0 1px 2px rgba(17, 35, 45, 0.6) inset;
-  -webkit-box-shadow: 0 1px 2px rgba(17, 35, 45, 0.6) inset;
-  box-shadow: 0 1px 2px rgba(17, 35, 45, 0.6) inset;
-} */
+
 
 .ui-slider-horizontal {
   height: 5px;
-  width: inherit;
+  width: 15rem;
+  margin-left: 7rem;
 }
 .ui-slider-horizontal .ui-slider-handle {
   top: -10px;
