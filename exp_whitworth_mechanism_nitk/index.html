@@ -98,7 +98,7 @@
             ></a>
             <span>Variables</span>
           </li>
-          <li class="tool-list">
+          <li class="tool-list" title="Play/Pause">
             <img
               id="playpausebutton"
               onclick="simstate()"
@@ -108,7 +108,7 @@
             />
             <span class="playPause">Pause</span>
           </li>
-          <li class="tool-list">
+          <li class="tool-list" title="Prev/Next">
             <div class="tool-list--two">
               <img
                 id="screenchangesbackward"
@@ -128,7 +128,7 @@
             <span>Prev/Next</span>
           </li>
 
-          <li class="tool-list">
+          <li class="tool-list" title="Rotate">
             <img
               id="rotationbutton"
               onclick="rotstate()"
@@ -138,7 +138,7 @@
             />
             <span class="">Rotate</span>
           </li>
-          <li class="tool-list">
+          <li class="tool-list" title="Trace">
             <img
               id="traceButton"
               onclick="tracePlot()"
@@ -155,10 +155,11 @@
           <div id="simulation" class="main__task-div">
             <h3 class="task-title">Simulation</h3>
             <div class="canvas__div">
+              <div id="titleincanvas" class="titleincanvas"></div>
               <div id="canvas-container">
                 <canvas id="simscreen" height="400px" width="550px"></canvas>
               </div>
-              <div id="titleincanvas"></div>
+             
               <div id="datatable1"></div>
               <div id="datatable2"></div>
               <div id="scale"></div>
@@ -175,7 +176,7 @@
                 <div class="var-div">
                   <div class="input-container">
                     <label for="ABspinner">AB</label>
-                    <input class="var-spinner" id="ABspinner" name="value" />
+                    <input class="var-spinner" type="number" id="ABspinner" name="value" />
                     <span>mm</span>
                   </div>
                   <div class="var-slider" id="ABslider"></div>
@@ -183,7 +184,7 @@
                 <div class="var-div">
                   <div class="input-container">
                     <label for="crankspinner">BC</label>
-                    <input class="var-spinner" id="crankspinner" name="value" />
+                    <input class="var-spinner" type="number" id="crankspinner" name="value" />
                     <span>mm</span>
                   </div>
                   <div class="var-slider" id="crankslider"></div>
@@ -191,17 +192,17 @@
                 <div class="var-div">
                   <div class="input-container">
                     <label for="alphaspinner">&alpha;</label>
-                    <input class="var-spinner" id="alphaspinner" name="value" />
+                    <input class="var-spinner" type="number" id="alphaspinner" name="value" />
                     <span>&deg;</span>
                   </div>
                   <div class="var-slider" id="alphaslider"></div>
                 </div>
                 <div class="var-div">
                   <div class="input-container">
-                    <label for="omega2spinner">&omega;<sub>2</sub></label>
+                    <label for="omega2spinner" type="number">&omega;<sub>2</sub></label>
                     <input
                       class="var-spinner"
-                      id="omega2spinner"
+                      id="omega2spinner" type="number"
                       name="value"
                     />
                     <span>rad/s</span>

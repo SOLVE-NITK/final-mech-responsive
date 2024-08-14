@@ -90,6 +90,7 @@ var pty = [];
 var utx = [];
 var uty = [];
 var trace = false;
+const rotationButton = document.getElementById('rotationbutton');
 
 /*
 function trythis()
@@ -134,6 +135,9 @@ function simstate() {
     $("#alphaspinner").spinner("value", ABC);
     pauseTime = setInterval("varupdate();", "100");
     document.querySelector(".playPause").textContent = "Play";
+    document.querySelector(".playPause").textContent = "Play";
+    rotationButton.classList.add('disabled');
+    console.log("disable")
   }
   if (imgfilename == "blueplaydull") {
     time = 0;
@@ -142,6 +146,8 @@ function simstate() {
     simTimeId = setInterval("time=time+0.1; varupdate(); ", "100");
     simstatus = 0;
     document.querySelector(".playPause").textContent = "Pause";
+    rotationButton.classList.remove('disabled');
+    console.log("enable");
   }
 }
 
@@ -322,6 +328,8 @@ function varupdate() {
     $("#omega2set").hide();
     ABC = $("#alphaspinner").spinner("value");
     omega2 = rotstatus * $("#omega2spinner").spinner("value");
+    ptx = [];
+    pty = [];
   }
 
   a.xcoord = 250;

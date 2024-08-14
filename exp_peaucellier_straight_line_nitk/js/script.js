@@ -38,6 +38,7 @@ var legendCS = false;
 var quickrefCS = false;
 //temporary or dummy variables
 var temp = 0;
+const rotationButton = document.getElementById('rotationbutton');
 
 /*
 // for trials during development
@@ -74,6 +75,9 @@ function simstate() {
     $("#thetaspinner").spinner("value", theta); //to set simulation parameters on pause
     pauseTime = setInterval("varupdate();", "100");
     document.querySelector(".playPause").textContent = "Play";
+    rotationButton.classList.add('disabled');
+    // rotationButton.onclick = tracePlot; // Re-enable the function
+    // console.log("disable")
   }
   if (imgfilename == "blueplaydull") {
     time = 0;
@@ -82,6 +86,9 @@ function simstate() {
     simTimeId = setInterval("time=time+0.1; varupdate(); ", "100");
     simstatus = 0;
     document.querySelector(".playPause").textContent = "Pause";
+    rotationButton.classList.remove('disabled');
+    // rotationButton.onclick = null; // Disable the function
+    // console.log("enable");
   }
 }
 
@@ -272,6 +279,8 @@ function varupdate() {
     $("#thetaslider").slider("enable");
     $("#thetaspinner").spinner("enable");
     theta = $("#thetaspinner").spinner("value");
+    ptx = [];
+    pty = [];
   }
 
   AQ = 2 * r * Math.cos(rad(theta / 2));

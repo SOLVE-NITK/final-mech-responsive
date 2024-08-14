@@ -437,6 +437,9 @@ function draw() {
     pointdisp(b, ctx);
     pointdisp(c, ctx);
     pointdisp(d, ctx);
+    document.getElementById("vba").style.display = "block";
+    document.getElementById("vcb").style.display = "block";
+    document.getElementById("vca").style.display = "block";
     // Position Diagram Title
     ctx.save();
     ctx.lineWidth = 1;
@@ -463,18 +466,19 @@ function draw() {
     $("#titleincanvas").hide();
     $("#datatable1").hide();
     //$('#datatable2').hide();
-    ctx.strokeStyle = "#000000";
-    ctx.font = '16px "Nunito", sans-serif';
-    ctx.save();
-    ctx.lineWidth = 2;
-    ctx.strokeText("Combination does not satisfy Grashof rule ", -0, 200, 270);
-    ctx.restore();
-    ctx.strokeText("Please go to non-Grashof simulation", 0, 300);
-    ctx.font = '16px "Nunito", sans-serif';
-    ctx.strokeText("if you wish to work with the given", 0, 314);
-    ctx.font = '16px "Nunito", sans-serif';
-    ctx.lineWidth = 1.5;
-    ctx.strokeText("link combination", 0, 330);
+    // ctx.strokeStyle = "red";
+    // ctx.font = '16px "Nunito", sans-serif';
+    // ctx.save();
+    // ctx.lineWidth = 2;
+    // ctx.fillStyle = "red";
+    // ctx.strokeText("Combination does not satisfy Grashof rule ", 50, 100);
+    // ctx.restore();
+    // ctx.strokeText("Please go to non-Grashof simulation", 50, 140);
+    // ctx.font = '16px "Nunito", sans-serif';
+    // ctx.strokeText("if you wish to work with the given link combination", 0, 164);
+    // ctx.font = '16px "Nunito", sans-serif';
+    // ctx.lineWidth = 1.5;
+    // ctx.strokeText("link combination", 0, 330);
     // printcomment("<center>Please go to non-Grashof simulation<br>if you wish to work with the given link combination</center>",0)
     // printcomment("Please go to non-Grashof simulation<br>if you wish to work with the given link combination", 1000, '50px "Nunito", sans-serif', "left")
     document.getElementById("vba").style.display = "none";
@@ -585,8 +589,17 @@ function checkGrashof() {
   var l = links[3];
   if (s + l > p + q) {
     flaggrashof = false;
+    document.getElementById("commentboxleft").style.display="none";
+    document.getElementById("commentboxright").style.display="none";
+    document.getElementById("commentboxright1").style.visibility = "visible";
+    document.getElementById("commentboxright1").innerHTML = 
+             'This simulation is exclusively for non-Grashof Combinations.<br> Please change the slider value</div>';
+
   } else {
     flaggrashof = true;
+    document.getElementById("commentboxleft").style.display="block";
+    document.getElementById("commentboxright").style.display="block";
+        document.getElementById("commentboxright1").style.visibility = "hidden";
   }
 }
 

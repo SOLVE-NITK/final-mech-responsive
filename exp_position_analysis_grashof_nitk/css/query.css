@@ -74,7 +74,7 @@ em:current font size
   } */
 
   #variables {
-    width: 201%;
+    width: 200%;
   }
 }
 
@@ -177,9 +177,9 @@ em:current font size
   .tool-list span {
     font-size: 1.2rem;
   }
-  /* #variables {
-    width: 201%;
-  } */
+  #variables {
+    width: 200%;
+  }
 }
 
 /* **************************** */

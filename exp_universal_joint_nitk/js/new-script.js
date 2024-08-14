@@ -743,10 +743,10 @@ function graph(context) {
     ptxddot.push(270 - ptx);
     //plot_graph(ptx,ptxddot,context,truncate,"#336699");
   } else {
-    ptx = [];
-    ptxdot = [];
-    ptxddot = [];
-    pty = [];
+    // ptx = [];
+    // ptxdot = [];
+    // ptxddot = [];
+    // pty = [];
     j = 20;
     //ptx.push(30);
     //pty.push(270);

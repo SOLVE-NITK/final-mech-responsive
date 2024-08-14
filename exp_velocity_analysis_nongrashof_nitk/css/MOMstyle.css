@@ -202,4 +202,5 @@ canvas {
 #commentboxleft,
 #commentboxright {
   justify-self: center;
+  font-size: 14px;
 }

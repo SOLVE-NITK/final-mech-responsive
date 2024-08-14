@@ -87,31 +87,31 @@
           </li>
           <li class="tool-list">
             <img
-              id="playpausebutton"
+              id="playpausebutton" title="Play/Pause" 
               onclick="simstate()"
               src="images/bluepausedull.svg"
               alt=""
               class="icons"
             />
-            <span class="playPause">Pause</span>
+            <span class="playPause" >Pause</span>
           </li>
           <li class="tool-list">
             <img
-              id="rotationbutton"
+              id="rotationbutton" title="Rotate"
               onclick="rotstate()"
               src="images/bluecwdull.svg"
               alt=""
-              class="icons"
+              class="icons" title="Rotate"
             />
             <span class="">Rotate</span>
           </li>
           <li class="tool-list">
             <img
-              id="rotationbutton"
+              id="rotationbutton" title="Graph"
               onclick="checkGraph()"
               src="images/graphbutton.svg"
               alt=""
-              class="icons"
+              class="icons" title="Graph"
             />
             <span class="">Graph</span>
           </li>
@@ -140,6 +140,7 @@
               </div>
 
               <div >
+                <div class="legend-text" style="font-weight: bold;font-size: 15px;">Legend</div>
                 <button><img src="images/legendicon.png" title="Legend" onclick="showLegend();"></button>
                 <div id="elementToworkon">
                   <img id="legendimg" title="Legend" src="images/legendSYvel.png">
@@ -163,7 +164,7 @@
                   <div class="var-div">
                     <div class="input-container">
                       <label for="crankspinner">Crank</label>
-                      <input class="var-spinner" id="crankspinner" name="value" />
+                      <input class="var-spinner" type="number" id="crankspinner" name="value" />
                       <span>mm</span>
                     </div>
                   <div class="var-slider" id="crankslider"></div>
@@ -172,7 +173,7 @@
                   <div class="input-container">
 
                     <label for="thetaspinner">&theta;</label>
-                    <input class="var-spinner" id="thetaspinner" name="value" />
+                    <input class="var-spinner" type="number" id="thetaspinner" name="value" />
                     <span>&deg;</span>
                   </div>
                   <div class="var-slider" id="thetaslider"></div>
@@ -180,7 +181,7 @@
                 <div class="var-div">
                   <div class="input-container">
                     <label for="omegaspinner">&omega; </label>
-                    <input class="var-spinner" id="omegaspinner" name="value" />
+                    <input class="var-spinner" type="number" id="omegaspinner" name="value" />
                     <span>rad/s</span>
                   </div>
                   <div class="var-slider" id="omegaslider"></div>

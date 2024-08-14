@@ -74,7 +74,7 @@
           ></a>
           <span>Variables</span>
         </li>
-        <li class="tool-list">
+        <li class="tool-list" title="Play/Pause">
           <img
             id="playpausebutton"
             onclick="simstate()"
@@ -84,7 +84,7 @@
           />
           <span class="playPause">Pause</span>
         </li>
-        <li class="tool-list">
+        <li class="tool-list" title="Rotate">
           <img
             id="rotationbutton"
             onclick="rotstate()"
@@ -94,7 +94,7 @@
           />
           <span class="">Rotate</span>
         </li>
-        <li class="tool-list">
+        <li class="tool-list" title="Trace">
           <img
             id="rotationbutton"
             onclick="tracePlot()"
@@ -129,7 +129,7 @@
                <div class="var-div"> 
                 <div class="input-container">
                   <label for="OQspinner">OQ </label>
-                  <input class="var-spinner" id="OQspinner" name="value" />
+                  <input class="var-spinner" type="number" id="OQspinner" name="value" />
                   <span>cm</span>
                 </div>
                 <div class="var-slider" id="OQslider"></div>
@@ -137,7 +137,7 @@
               <div class="var-div">
                 <div class="input-container">
                   <label for="ABspinner">AB</label>
-                  <input class="var-spinner" id="ABspinner" name="value" />
+                  <input class="var-spinner" type="number" id="ABspinner" name="value" />
                   <span>cm</span>
                 </div>
                 <div class="var-slider" id="ABslider"></div>
@@ -145,7 +145,7 @@
               <div class="var-div">
                 <div class="input-container">
                   <label for="QCspinner">QC</label>
-                  <input class="var-spinner" id="QCspinner" name="value" />
+                  <input class="var-spinner" type="number" id="QCspinner" name="value" />
                   <span>cm</span>
                 </div>
                 <div class="var-slider" id="QCslider"></div>
@@ -153,7 +153,7 @@
               <div class="var-div">
                 <div class="input-container">
                   <label for="Angle made by OQ with horizontal">&theta; </label>
-                  <input class="var-spinner" id="thetaspinner" name="value" />
+                  <input class="var-spinner" type="number" id="thetaspinner" name="value" />
                   <span>&deg;</span>
                 </div>
                 <div class="var-slider" id="thetaslider"></div>

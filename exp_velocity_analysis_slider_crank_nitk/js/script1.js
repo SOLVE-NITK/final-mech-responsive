@@ -196,8 +196,8 @@ function varchange() {
   });
 
   // Initialize omega2 slider and spinner
-  $("#omega2slider").slider({ max: 10, min: 1, step: 0.2 });
-  $("#omega2spinner").spinner({ max: 10, min: 1, step: 0.2 });
+  $("#omega2slider").slider({ max: 4, min: 1, step: 0.2 });
+  $("#omega2spinner").spinner({ max: 4, min: 1, step: 0.2 });
 
   // Link omega2 slider and spinner
   $("#omega2slider").on("slide", function (e, ui) {

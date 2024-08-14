@@ -101,7 +101,7 @@
             ></a>
             <span>Variables</span>
           </li>
-          <li class="tool-list">
+          <li class="tool-list" title="Play/Pause">
             <img
               id="playpausebutton"
               onclick="simstate()"
@@ -111,7 +111,7 @@
             />
             <span class="playPause">Pause</span>
           </li>
-          <li class="tool-list">
+          <li class="tool-list" title="Rotate">
             <img
               id="rotationbutton"
               onclick="rotstate()"
@@ -121,7 +121,7 @@
             />
             <span class="">Rotate</span>
           </li>
-          <li class="tool-list">
+          <li class="tool-list" title="Trace">
             <img
               id="traceButton"
               onclick="enableGraphDraw()"
@@ -152,7 +152,7 @@
                 <div class="var-div">
                   <div class="input-container">
                     <label for="alphaSpinner">&alpha;</label>
-                    <input class="var-spinner" id="alphaSpinner" name="value" />
+                    <input class="var-spinner" type="number" id="alphaSpinner" name="value" />
                     <span>&deg;</span>
                   </div>
                   <div class="var-slider" id="alphaSlider"></div>
@@ -162,7 +162,7 @@
                     <label for="omega2Spinner">&omega;<sub>2</sub> </label>
                     <input
                       class="var-spinner"
-                      id="omega2Spinner"
+                      id="omega2Spinner" type="number"
                       name="value"
                     />
                     <span>rad/s</span>

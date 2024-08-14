@@ -308,7 +308,11 @@ function varupdate() {
   if (simstatus) {
     $("#thetaslider").slider("enable");
     $("#thetaspinner").spinner("enable");
+    ptx = [];
+    pty = [];
+    
     theta = $("#thetaspinner").spinner("value");
+   
   }
 
   le = 2 * lR * Math.cos(rad(theta / 2));

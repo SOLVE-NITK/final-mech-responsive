@@ -7,6 +7,7 @@ var commentloc = 0;
 var trans = new point(150, 280);
 var o = new point(0, 0, "");
 var q = new point(0, 0, "");
+var p = new point(0, 0, "P");
 var tempPt = new point(0, 0, "");
 var l = 40;
 var theta = 240; // all angles to be defined either in degrees only or radians only throughout the program and convert as and when required
@@ -22,14 +23,11 @@ var time = 0;
 //point tracing section
 var ptx = [];
 var pty = [];
-var ptxdot = [];
 //click status of legend and quick reference
 var legendCS = false;
 var quickrefCS = false;
 //temporary or dummy variables
 var temp = 0;
-//graph plotting
-var truncate = 240;
 var j = 20;
 var forvar = 0;
 /*
@@ -42,11 +40,7 @@ function trythis()
 function editcss() {
   $(".variable").css("padding-top", "45px");
   $(".usercheck").css("left", "40px");
-  $("#legend").css("width", document.getElementById("legendimg").width + "px");
-  $("#legend").css("top", 419);
-  $("#legend").css("left", 342);
-  $("#legendicon").css("top", 471);
-
+  //$('#legend').css("width",document.getElementById('legendimg').width+"px");
   //$('#quickref').css("height",document.getElementById('quickrefimg').height+"px");
 }
 
@@ -96,31 +90,10 @@ function rotstate() {
     rotstatus = 1;
   }
 }
-/*
-//Displaying Equations for Quick Reference
-function showEquations()
-{
-	if(quickrefCS)
-	{
-		$('#quickreficon').css('border', 'double');
-		$('#quickref').css('width', '0px');
-		$('#quickref').css('left', '600px');
-		$('#quickref').css('border', '0px');
-		quickrefCS=false;	
-		
-	}
-	else
-	{
-		$('#quickreficon').css('border', 'inset red');
-		$('#quickref').css('width', document.getElementById('quickrefimg').width+"px");
-		$('#quickref').css("left", 599-document.getElementById('quickrefimg').width+"px");
-		$('#quickref').css('border', 'solid 1px');
-		quickrefCS=true;	
-	}
-}
-*/
+
 //Displaying Legend
-/*function showLegend()
+/*
+function showLegend()
 {
 	if(legendCS)
 	{
@@ -136,19 +109,8 @@ function showEquations()
 		$('#legend').css('border', 'solid 1px');
 		legendCS=true;	
 	}
-}*/
-const divContainer = document.querySelector("#elementToworkon");
-let isClicked = true;
-
-let showLegend = function () {
-  if (isClicked) {
-    divContainer.style.display = "block";
-    isClicked = false;
-  } else {
-    divContainer.style.display = "none";
-    isClicked = true;
-  }
-};
+}
+*/
 
 //Initialise system parameters here
 function varinit() {
@@ -175,14 +137,12 @@ function varchange() {
   $("#crankslider").on("slide", function (e, ui) {
     $("#crankspinner").spinner("value", ui.value);
     j = 20;
-    ptxdot = [];
     ptx = [];
     pty = [];
   });
   $("#crankspinner").on("spin", function (e, ui) {
     $("#crankslider").slider("value", ui.value);
     j = 20;
-    ptxdot = [];
     ptx = [];
     pty = [];
   });
@@ -213,14 +173,12 @@ function varchange() {
   $("#omegaslider").on("slide", function (e, ui) {
     $("#omegaspinner").spinner("value", ui.value);
     j = 20;
-    ptxdot = [];
     ptx = [];
     pty = [];
   });
   $("#omegaspinner").on("spin", function (e, ui) {
     $("#omegaslider").slider("value", ui.value);
     j = 20;
-    ptxdot = [];
     ptx = [];
     pty = [];
   });
@@ -238,10 +196,7 @@ function varupdate() {
   $("#omegaslider").slider("value", $("#omegaspinner").spinner("value"));
   l = $("#crankspinner").spinner("value");
 
-  printcomment(
-    "Simple Harmonic Motion <br> v = - &omega; * A * sin( &omega; t )",
-    1
-  );
+  printcomment("Simple Harmonic Motion <br> s = A * cos( ω t )", 1);
 
   if (!simstatus) {
     $("#omegaslider").slider("enable");
@@ -260,14 +215,12 @@ function varupdate() {
     $("#omegaspinner").spinner("disable");
     theta = $("#thetaspinner").spinner("value");
     printcomment(
-      "Velocity (mm/s) <br> v = -" +
-        omega +
-        " &times; " +
+      "Displacement (mm) <br> s = " +
         l +
-        " &times; sin(" +
+        " &times; cos(" +
         theta +
         "&deg;)  = " +
-        roundd(-omega * l * Math.sin(rad(theta)), 2),
+        roundd(l * Math.cos(rad(theta)), 2),
       2
     );
   }
@@ -290,16 +243,16 @@ function draw() {
   q = pointtrans(q, trans);
   ctx.save();
   ctx.lineWidth = 1;
-  ctx.font = "700 16px 'Nunito', sans-serif";
+  ctx.font = "24px 'Nunito', sans-serif";
   ctx.fillStyle = "#000000";
-  ctx.fillText("Velocity Analysis", 15, 15);
+  // ctx.fillText("Position Analysis", 15, 25);
   ctx.restore();
   //ptx.push(p.xcoord);
   //pty.push(p.ycoord);
   disprem(ctx);
   pointjoin(o, q, ctx, "#DE4100", 10);
-  pointdisp(o, ctx, 2, "black", "#003366");
-  pointdisp(q, ctx, 6, "black", "#003366");
+  pointdisp(o, ctx, 2, "black", "#003366", 1);
+  pointdisp(q, ctx, 6, "black", "#003366", 1);
   dispyoke(ctx);
   graph(ctx);
 }
@@ -359,18 +312,17 @@ function dispyoke(context) {
 function checkGraph() {
   if (document.getElementById("graphPlot").checked == false) {
     document.getElementById("graphPlot").checked = true;
-    // graph(context);
+    graph(context);
   } else {
     document.getElementById("graphPlot").checked = false;
   }
 }
-
 //function for graph plotting
 function graph(context) {
   if (document.getElementById("graphPlot").checked == true) {
     if (!simstatus) {
       ptx.push(q.xcoord + 145);
-      ptxdot.push(o.xcoord + 145 - l * omega * Math.sin(rad(theta)));
+      //ptxdot.push(o.xcoord+145-(pt2y*omega*Math.PI/180));
       //ptxddot.push(pt1x+145-(pt2x*Math.pow((omega*Math.PI/180),2)));
       pty.push(o.ycoord - j);
       j = j + 1;
@@ -378,41 +330,30 @@ function graph(context) {
 
     tempPt.xcoord = q.xcoord + 145;
     tempPt.ycoord = o.ycoord;
-    pointdisp(tempPt, context, 3, "#000000", "#336699");
+    pointdisp(tempPt, context, 3, "#000000", "#336699", "");
     context.lineWidth = 1;
-    context.strokeStyle = "#000000";
+    context.strokeStyle = "#000";
     context.moveTo(q.xcoord + 145, o.ycoord);
-    if (pty.length < truncate) {
-      context.lineTo(q.xcoord + 145, pty[pty.length - 1]);
-      context.moveTo(o.xcoord + 145 - 300, pty[pty.length - 1]);
-      context.lineTo(o.xcoord + 145 + 300, pty[pty.length - 1]);
-    } else {
-      context.lineTo(q.xcoord + 145, pty[truncate]);
-      context.moveTo(o.xcoord + 145 - 300, pty[truncate]);
-      context.lineTo(o.xcoord + 145 + 300, pty[truncate]);
-    }
+    if (pty.length < 230) context.lineTo(q.xcoord + 145, pty[pty.length - 1]);
+    else context.lineTo(q.xcoord + 145, pty[230]);
     context.stroke();
+
     context.beginPath();
     context.lineWidth = 1;
     context.strokeStyle = "#000000";
-    ctx.font = "700 16px 'Nunito', sans-serif";
+    context.font = "14px 'Nunito', sans-serif";
     context.moveTo(o.xcoord + 145, o.ycoord);
     context.lineTo(o.xcoord + 145, o.ycoord - 300);
-    context.fillText("Time", o.xcoord + 150, o.ycoord - 265);
-    context.moveTo(o.xcoord - 150, pty[0]);
-    context.lineTo(o.xcoord + 450, pty[0]);
-    context.fillText("Amplitude", o.xcoord + 300, o.ycoord - 3);
-    context.save();
-    context.textAlign = "center";
+    context.fillText("Time", o.xcoord + 145, o.ycoord - 265);
+    context.moveTo(o.xcoord, pty[0]);
+    context.lineTo(o.xcoord + 300, pty[0]);
+    context.fillText("Amplitude", o.xcoord + 300, pty[0] - 10);
     context.fillText("+100", o.xcoord + 145 + 100, pty[0] - 10);
     context.fillText("-100", o.xcoord + 145 - 100, pty[0] - 10);
-    context.fillText("+200", o.xcoord + 145 + 200, pty[0] - 10);
-    context.fillText("-200", o.xcoord + 145 - 200, pty[0] - 10);
-    context.restore();
 
     for (
       forvar = 0;
-      forvar <= 300;
+      forvar <= 100;
       forvar += 20 //amplitude axis marking
     ) {
       context.moveTo(o.xcoord + 145 - forvar, pty[0] + 2.5);
@@ -422,12 +363,10 @@ function graph(context) {
     }
     context.stroke();
     context.closePath();
-
-    plotgraph(ptx, pty, context, truncate);
-    plotgraph(ptxdot, pty, context, truncate, "#00FF00");
+    plotgraph(ptx, pty, context, 230);
   } else {
     ptx = [];
-    ptxdot = [];
+    //	ptxdot=[];
     //	ptxddot=[];
     pty = [];
     j = 20;

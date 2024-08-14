@@ -99,6 +99,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 }
 .tool-list span {
   display: inline-block;
@@ -227,10 +228,15 @@ h1 {
   height: auto;
   border-bottom-right-radius: 1rem;
   border-bottom-left-radius: 1rem;
+  display:flex;
+  justify-content: center;
 }
 #canvas-container {
   width: 100%;
   height: auto;
+  display:grid;
+  justify-content: center;
+ 
 }
 #canvas {
   border-left: 1px solid rgba(177, 176, 176, 0.855);
@@ -242,8 +248,8 @@ h1 {
   position: absolute right;
   left: 564px;
   top: 471px;
-  height: 24px;
-  width: 24px;
+  height: 29px;
+  width: 30px;
   border: double;
 }
 #legend {

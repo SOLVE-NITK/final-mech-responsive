@@ -52,7 +52,14 @@ h1 {
 /* ********************** */
 /* *******SIDEBAR******* */
 /* ********************** */
-
+.titleincanvas {
+  grid-column: 1/-1;
+  justify-self: center;
+}
+#simscreen {
+  grid-column: 1/-1;
+  justify-self: center;
+}
 .sidebar {
   /* background-color: gray; */
   display: flex;
@@ -99,6 +106,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 }
 .tool-list span {
   display: inline-block;
@@ -231,10 +239,14 @@ h1 {
   height: auto;
   border-bottom-right-radius: 1rem;
   border-bottom-left-radius: 1rem;
+  display:flex;
+  justify-content: center;
 }
 #canvas-container {
   width: 100%;
   height: auto;
+  display:flex;
+  justify-content: center;
 }
 #canvas {
   border-left: 1px solid rgba(177, 176, 176, 0.855);

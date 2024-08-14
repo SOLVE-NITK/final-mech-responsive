@@ -116,8 +116,8 @@ function showLegend() {
 function varinit() {
   varchange();
   //Variable r slider and number input types
-  $("#rslider").slider("value", 40);
-  $("#rspinner").spinner("value", 40);
+  $("#rslider").slider("value", 30);
+  $("#rspinner").spinner("value", 30);
   //Variable a slider and number input types
   $("#aslider").slider("value", 30);
   $("#aspinner").spinner("value", 30);
@@ -131,8 +131,8 @@ function varinit() {
 
 function varchange() {
   //Variable r slider and number input types
-  $("#rslider").slider({ max: 60, min: 20, step: 1 }); // slider initialisation : jQuery widget
-  $("#rspinner").spinner({ max: 60, min: 20, step: 1 }); // number initialisation : jQuery widget
+  $("#rslider").slider({ max: 30, min: 20, step: 1 }); // slider initialisation : jQuery widget
+  $("#rspinner").spinner({ max: 30, min: 20, step: 1 }); // number initialisation : jQuery widget
   // monitoring change in value and connecting slider and number
   // setting trace point coordinate arrays to empty on change of link length
   $("#rslider").on("slide", function (e, ui) {
@@ -222,8 +222,8 @@ function varchange() {
   });
 
   //Variable omega2 slider and number input types
-  $("#omegaslider").slider({ max: 2, min: 0.1, step: 0.1 }); // slider initialisation : jQuery widget
-  $("#omegaspinner").spinner({ max: 2, min: 0.1, step: 0.1 }); // number initialisation : jQuery widget
+  $("#omegaslider").slider({ max: 1.5, min: 1, step: 0.1 }); // slider initialisation : jQuery widget
+  $("#omegaspinner").spinner({ max: 1.5, min: 1, step: 0.1 }); // number initialisation : jQuery widget
   // monitoring change in value and connecting slider and number
   // setting trace point coordinate arrays to empty on change of link length
   $("#omegaslider").on("slide", function (e, ui) {

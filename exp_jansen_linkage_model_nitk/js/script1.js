@@ -66,6 +66,7 @@ var pty = [];
 var utx = [];
 var uty = [];
 var trace = false;
+const rotationButton = document.getElementById('rotationbutton');
 
 /*
 function trythis()
@@ -94,6 +95,8 @@ function simstate() {
     simstatus = 1;
     $("#alphaSpinner").spinner("value", BAC);
     pauseTime = setInterval("varupdate();", "100");
+    rotationButton.classList.add('disabled');
+    // console.log("disable")
   }
   if (imgfilename == "blueplaydull") {
     time = 0;
@@ -101,6 +104,8 @@ function simstate() {
     document.getElementById("playpausebutton").src = "images/bluepausedull.svg";
     simTimeId = setInterval("time=time+0.1; varupdate(); ", "100");
     simstatus = 0;
+    rotationButton.classList.remove('disabled');
+    // console.log("enable");
   }
 }
 
@@ -241,6 +246,8 @@ r2=$('#crankspinner').spinner("value");*/
     $("#omega2set").hide();
     BAC = $("#alphaSpinner").spinner("value");
     omega2 = rotstatus * $("#omega2Spinner").spinner("value");
+    ptx = [];
+    pty = [];
   }
   rab = Math.sqrt(rao * rao + rob * rob);
   k = (rac * rac - rcd * rcd + rbd * rbd + rab * rab) / 2;

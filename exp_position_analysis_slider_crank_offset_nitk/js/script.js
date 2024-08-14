@@ -525,7 +525,7 @@ function drawrem(context) {
     document.getElementById("commentboxright").style.display="none";
     document.getElementById("commentboxright1").style.display="block";
     document.getElementById("commentboxright1").innerHTML = 
-         'The quick return ratio is reaching the infinity<br>please change the slider value to avoid this condition</div>';
+         'The quick return ratio is reaching the infinity.<br> Please change the offset slider value to avoid this condition</div>';
 }
 else {
   // console.log("This is a number");

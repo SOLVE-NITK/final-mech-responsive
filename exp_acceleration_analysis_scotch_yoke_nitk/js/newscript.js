@@ -366,7 +366,7 @@ function dispyoke(context) {
 function checkGraph() {
   if (document.getElementById("graphPlot").checked == false) {
     document.getElementById("graphPlot").checked = true;
-    graph(context);
+    // graph(context);
   } else {
     document.getElementById("graphPlot").checked = false;
   }

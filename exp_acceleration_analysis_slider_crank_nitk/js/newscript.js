@@ -167,22 +167,34 @@ function showEquations()
 }*/
 
 //Displaying Legend
-function showLegend() {
-  if (legendCS) {
-    $("#legendicon").css("border", "double");
-    $("#legend").css("height", "0px");
-    $("#legend").css("border", "0px");
-    legendCS = false;
+// function showLegend() {
+//   if (legendCS) {
+//     $("#legendicon").css("border", "double");
+//     $("#legend").css("height", "0px");
+//     $("#legend").css("border", "0px");
+//     legendCS = false;
+//   } else {
+//     $("#legendicon").css("border", "inset red");
+//     $("#legend").css(
+//       "height",
+//       document.getElementById("legendimg").height + "px"
+//     );
+//     $("#legend").css("border", "solid 1px");
+//     legendCS = true;
+//   }
+// }
+const divContainer = document.querySelector("#elementToworkon");
+let isClicked = true;
+
+let showLegend = function () {
+  if (isClicked) {
+    divContainer.style.display = "block";
+    isClicked = false;
   } else {
-    $("#legendicon").css("border", "inset red");
-    $("#legend").css(
-      "height",
-      document.getElementById("legendimg").height + "px"
-    );
-    $("#legend").css("border", "solid 1px");
-    legendCS = true;
+    divContainer.style.display = "none";
+    isClicked = true;
   }
-}
+};
 
 //Initialise system parameters here
 function varinit() {
