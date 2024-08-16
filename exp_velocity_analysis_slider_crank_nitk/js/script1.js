@@ -196,8 +196,8 @@ function varchange() {
   });
 
   // Initialize omega2 slider and spinner
-  $("#omega2slider").slider({ max: 4, min: 1, step: 0.2 });
-  $("#omega2spinner").spinner({ max: 4, min: 1, step: 0.2 });
+  $("#omega2slider").slider({ max: 10, min: 1, step: 0.2 });
+  $("#omega2spinner").spinner({ max: 10, min: 1, step: 0.2 });
 
   // Link omega2 slider and spinner
   $("#omega2slider").on("slide", function (e, ui) {
@@ -376,7 +376,7 @@ function draw() {
   ctx.strokeText("A", a.xcoord - 3, a.ycoord + 3);
   ctx.save();
   ctx.translate(0.75, 0.75);
-  ctx.font = "12px 'Comic Sans MS'";
+  ctx.font = "650 1.3rem 'Nunito'";
   ctx.fillStyle = "#000";
   if (scaleV >= 1) ctx.fillText("Scale = 1:" + scaleV, 225, 165);
   if (scaleV < 1) ctx.fillText("Scale = " + 1 / scaleV + ":1", 225, 165);
@@ -481,16 +481,17 @@ function drawrem(context) {
 
   // Position Analysis Title
   context.save();
-  ctx.translate(0.5, 0.5);
+  // ctx.translate(0.5, 0.5);
+  
   context.lineWidth = 1;
-  context.font = "15px 'Nunito', 'sans-serif'";
+  context.font = "600 1.8rem 'Nunito'";
   context.fillStyle = "#000000";
   context.fillText("Position Diagram", 225, 15);
   context.restore();
   ctx.save();
   ctx.translate(0.5, 0.5);
   context.lineWidth = 1;
-  context.font = "15px 'Nunito', 'sans-serif'";
+  context.font = "600 1.8rem 'Nunito'";
   context.fillStyle = "#000000";
   context.fillText("Velocity Diagram", 225, 150);
   context.restore();
@@ -498,7 +499,7 @@ function drawrem(context) {
   context.save();
   context.lineWidth = 1;
   context.fillStyle = "#000000";
-  context.font = "12px Arial";
+  context.font = "650 1.8rem 'Nunito";
   context.fillText("d", (o.xcoord + b.xcoord) / 2, o.ycoord - offset - 10);
   context.fillText(
     "r",

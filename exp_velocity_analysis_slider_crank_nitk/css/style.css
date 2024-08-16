@@ -297,8 +297,8 @@ h1 {
 #canvas-container {
  display: grid;
  place-items: center;
- width: 100%;
- height: auto;
+ /* width: 100%;
+ height: auto; */
  
   
 }
@@ -449,13 +449,15 @@ html {
 
 #commentboxleft,
 #commentboxright {
+  align-items: center;
   /* margin-left: 120px; */
 }
 
 #commentboxright{
-  margin-left: -104px;
+  margin-left: -71px;
+  /* align-items: center; */
 }
 
 .text{
-  font-size: 14px;
+  font-size: 16px;
 }
